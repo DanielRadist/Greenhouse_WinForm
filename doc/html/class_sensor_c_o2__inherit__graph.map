@@ -1,0 +1,4 @@
+<map id="SensorCO2" name="SensorCO2">
+<area shape="rect" id="node1" title="Датчик уровня СО2 в воздухе." alt="" coords="5,175,115,252"/>
+<area shape="rect" id="node2" href="$class_sensor.html" title="Абстрактный класс &quot;Сенсор&quot;" alt="" coords="16,5,104,127"/>
+</map>

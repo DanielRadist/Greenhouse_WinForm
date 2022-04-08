@@ -1,0 +1,10 @@
+<map id="SystemControl::add" name="SystemControl::add">
+<area shape="rect" id="node1" title="Добавление контролера в систему." alt="" coords="201,209,339,235"/>
+<area shape="rect" id="node2" href="$class_system_control_builder.html#a88d11bb14518540f561d871e45a6f767" title="Создание контроллера управления краном СО2." alt="" coords="5,5,153,47"/>
+<area shape="rect" id="node3" href="$class_system_control_builder.html#a82b5ec4a34e72884a1aa46235eaa8ba5" title="Создание контроллера управления кондиционером" alt="" coords="5,71,153,112"/>
+<area shape="rect" id="node4" href="$class_system_control_builder.html#a783d9a7f087cd2284fc45ed06c28f0bd" title="Создание контроллера управления подогревом" alt="" coords="5,136,153,177"/>
+<area shape="rect" id="node5" href="$class_system_control_builder.html#aebdf2f98132756d2b1a40c57480e934e" title="Создание контроллера управления влажностью воздуха" alt="" coords="5,201,153,243"/>
+<area shape="rect" id="node6" href="$class_system_control_builder.html#a2e0b47c753ff491985c681faf95e1fb4" title="Создание контроллера управления искусственым освещением" alt="" coords="5,267,153,308"/>
+<area shape="rect" id="node7" href="$class_system_control_builder.html#a49b285857a70df11c39a4bce4228ca61" title="Создание контроллера управления краном полива" alt="" coords="5,332,153,373"/>
+<area shape="rect" id="node8" href="$class_system_control_builder.html#af7dba3ee11faf86fafb190164b41d7b5" title="Создание контроллера привода окна" alt="" coords="5,397,153,439"/>
+</map>

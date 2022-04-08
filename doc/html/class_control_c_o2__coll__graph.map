@@ -1,0 +1,4 @@
+<map id="ControlCO2" name="ControlCO2">
+<area shape="rect" id="node1" title="Кран подачи СО2." alt="" coords="5,175,115,281"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="Интерфес контроллеров." alt="" coords="16,5,104,127"/>
+</map>

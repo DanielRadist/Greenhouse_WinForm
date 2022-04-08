@@ -1,0 +1,4 @@
+<map id="SystemSensor::getSensors" name="SystemSensor::getSensors">
+<area shape="rect" id="node1" title="Получение списка сенсоров добавленных в данный объект SystemSensor." alt="" coords="256,5,439,32"/>
+<area shape="rect" id="node2" href="$class_main_system.html#afd347394779ce32693854c643acdad28" title="Получение списка сенсоров в теплице." alt="" coords="5,5,208,32"/>
+</map>

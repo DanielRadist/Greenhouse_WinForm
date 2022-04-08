@@ -2,16 +2,27 @@
 #include <map>
 #include <string>
 
+/// <summary>
+/// Тип сенсора.
+/// </summary>
+/*!
+*	\file
+*/
 enum class TypeSensor
 {
-	Temperature,			// датчик температуры
-	Light,					// датчик освещенности
-	Humidity,				// датчик влажности
-	CO2,					// датчик углекислого газа
-	SoilHumidity,			// датчик влажности почвы
-	System
+	Temperature,			///< Сенсор температуры
+	Light,					///< Сенсор освещенности
+	Humidity,				///< Сенсор влажности
+	CO2,					///< Сенсор углекислого газа
+	SoilHumidity,			///< Сенсор влажности почвы
+	System					///< Системный сенсор
 };
 
+/// <summary>
+/// Метод для сопоставления TypeSensor со стракой std::string.
+/// </summary>
+/// <param name="type">TypeSensor, который необходимо перевести в строку.</param>
+/// <returns>Строка соответсвующая TypeSensor.<</returns>
 inline std::string TypeSensorToStr(TypeSensor type)
 {
 	std::map<TypeSensor, std::string> nameSensor

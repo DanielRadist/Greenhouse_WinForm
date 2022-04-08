@@ -1,0 +1,4 @@
+<map id="IStrategy::solution" name="IStrategy::solution">
+<area shape="rect" id="node1" title="Виртуальный метод по принятию решения. Решение зависит от климатических параметров и типа реализации ..." alt="" coords="251,5,377,32"/>
+<area shape="rect" id="node2" href="$class_main_system.html#a7d0a9f8665ae2c6a6c6970ac8a6da813" title="Воспользоваться стратегией." alt="" coords="5,5,203,32"/>
+</map>

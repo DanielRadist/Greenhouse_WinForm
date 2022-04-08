@@ -1,0 +1,5 @@
+<map id="ISystemBuilder" name="ISystemBuilder">
+<area shape="rect" id="node1" title="Интерфес строителя систем: SystemSensor и SystemControl." alt="" coords="112,5,259,185"/>
+<area shape="rect" id="node2" href="$class_system_control_builder.html" title="Строитель системы контроля климата" alt="" coords="5,233,173,443"/>
+<area shape="rect" id="node3" href="$class_system_sensor_builder.html" title="Строитель системы датчиков (сенсоров) климата" alt="" coords="197,233,365,443"/>
+</map>

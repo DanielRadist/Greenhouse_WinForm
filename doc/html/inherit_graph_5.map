@@ -1,0 +1,5 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$class_i_state.html" title="Состояния устроств которые регулируют климат в теплицы: обогреватель, кондиционеры,..." alt="" coords="5,31,61,57"/>
+<area shape="rect" id="node2" href="$class_o_f_f_state.html" title="Состояние OFF контроллера. Часть паттерна &quot;Состояние&quot;." alt="" coords="109,5,188,32"/>
+<area shape="rect" id="node3" href="$class_o_n_state.html" title="Состояние ON контроллера. Часть паттерна &quot;Состояние&quot;." alt="" coords="113,56,185,83"/>
+</map>

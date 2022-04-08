@@ -1,0 +1,3 @@
+<map id="DeviceControl" name="DeviceControl">
+<area shape="rect" id="node1" title="Делегирование DeviceControl для безопасного управления объектами IControl. Часть паттерна &quot;Состояние&quot;..." alt="" coords="5,5,152,156"/>
+</map>

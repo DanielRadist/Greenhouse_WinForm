@@ -1,0 +1,4 @@
+<map id="SystemSensorBuilder::getResult" name="SystemSensorBuilder::getResult">
+<area shape="rect" id="node1" title="Возвращает указатель на дочерний класс интерфеса SystemSensor с созданными сенсорами." alt="" coords="229,5,377,47"/>
+<area shape="rect" id="node2" href="$class_main_system.html#aed9d007c8b9294f4ff8d578675d53b22" title="Конструктор системы." alt="" coords="5,13,181,39"/>
+</map>

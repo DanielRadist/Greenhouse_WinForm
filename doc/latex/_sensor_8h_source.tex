@@ -1,0 +1,55 @@
+\hypertarget{_sensor_8h_source}{}\doxysection{Sensor.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}DataClimat.h"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_sensor}{Sensor}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 \textcolor{keyword}{public}:}
+\DoxyCodeLine{7     \mbox{\hyperlink{class_sensor}{Sensor}}(TypeSensor type);}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9     TypeSensor getType();}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} getData();}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_data_source}{DataSource}};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{16     TypeSensor type;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} data;}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_sensor_temperature}{SensorTemperature}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_sensor}{Sensor}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_sensor_temperature}{SensorTemperature}}();}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{class }\mbox{\hyperlink{class_sensor_light}{SensorLight}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_sensor}{Sensor}}}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_sensor_light}{SensorLight}}();}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{class }\mbox{\hyperlink{class_sensor_c_o2}{SensorCO2}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_sensor}{Sensor}}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36 \textcolor{keyword}{public}:}
+\DoxyCodeLine{37     \mbox{\hyperlink{class_sensor_c_o2}{SensorCO2}}();}
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{keyword}{class }\mbox{\hyperlink{class_sensor_humidity}{SensorHumidity}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_sensor}{Sensor}}}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42 \textcolor{keyword}{public}:}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_sensor_humidity}{SensorHumidity}}();}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{class }\mbox{\hyperlink{class_sensor_soil_humidity}{SensorSoilHumidity}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_sensor}{Sensor}}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48 \textcolor{keyword}{public}:}
+\DoxyCodeLine{49     \mbox{\hyperlink{class_sensor_soil_humidity}{SensorSoilHumidity}}();}
+\DoxyCodeLine{50 \};}
+
+\end{DoxyCode}

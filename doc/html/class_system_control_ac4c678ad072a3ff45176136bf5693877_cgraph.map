@@ -1,0 +1,6 @@
+<map id="SystemControl::solution" name="SystemControl::solution">
+<area shape="rect" id="node1" title="Выполнить решение по регулированию климата на основе стратегии." alt="" coords="5,56,167,83"/>
+<area shape="rect" id="node2" href="$class_system_control.html#a0c8cd79fe1b0eab73341704f213f380d" title="Поиск контролера." alt="" coords="220,5,375,32"/>
+<area shape="rect" id="node3" href="$class_device_control.html#acafd3bf51a6589eb0f82d2cb15b5a465" title="Изменение состояния IState контроллера." alt="" coords="215,56,380,83"/>
+<area shape="rect" id="node4" href="$_type_control_8h.html#ad4caccfcb24db661f001ca6f9cb08f9e" title="Метод для сопоставление TypeControl с данными тима std::string." alt="" coords="236,107,359,133"/>
+</map>

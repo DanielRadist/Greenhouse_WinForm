@@ -1,0 +1,111 @@
+\hypertarget{_control_8h_source}{}\doxysection{Control.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_type_control_8h}{TypeControl.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_i_control}{IControl}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4a}{TypeControl}} type;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \mbox{\hyperlink{class_i_control}{IControl}}(\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4a}{TypeControl}} type);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_control_ae607abaeea282bf06e49bd8afe67f7bd}{on}}() = 0;      }
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_control_aca3bdb6d44dafb4541868df330496650}{off}}() = 0;     }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4a}{TypeControl}} getType();}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{34 \textcolor{keyword}{class }\mbox{\hyperlink{class_control_heater}{ControlHeater}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_control}{IControl}}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36 \textcolor{keyword}{public}:}
+\DoxyCodeLine{37     \mbox{\hyperlink{class_control_heater}{ControlHeater}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_heater_a30507e0da621ba6b7e972685ac2632ac}{on}}();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_heater_a9b8fc32ab35a6180d8a9f2e9de38d339}{off}}();}
+\DoxyCodeLine{41 \};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{46 \textcolor{keyword}{class }\mbox{\hyperlink{class_control_cooler}{ControlCooler}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_control}{IControl}}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48 \textcolor{keyword}{public}:}
+\DoxyCodeLine{49     \mbox{\hyperlink{class_control_cooler}{ControlCooler}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_cooler_a5f188ccbda8eeba84b82269372bd4210}{on}}();}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_cooler_a46bf54ef282e36e66601fb0c81e1b34a}{off}}();}
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58 \textcolor{keyword}{class }\mbox{\hyperlink{class_control_light}{ControlLight}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_control}{IControl}}}
+\DoxyCodeLine{59 \{}
+\DoxyCodeLine{60 \textcolor{keyword}{public}:}
+\DoxyCodeLine{61     \mbox{\hyperlink{class_control_light}{ControlLight}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_light_a30a3cbe56dd55e18c38c219d920a5ecc}{on}}();}
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_light_a3c93ddf45d74ccf7e4f5bcee6e74c18c}{off}}();}
+\DoxyCodeLine{65 \};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{70 \textcolor{keyword}{class }\mbox{\hyperlink{class_control_window}{ControlWindow}}}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72 \textcolor{keyword}{public}:}
+\DoxyCodeLine{73     \mbox{\hyperlink{class_control_window}{ControlWindow}}();}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{string} openness(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{85 \textcolor{keyword}{class }\mbox{\hyperlink{class_adapter_control_window}{AdapterControlWindow}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_control}{IControl}}}
+\DoxyCodeLine{86 \{}
+\DoxyCodeLine{87 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{88     \textcolor{keywordtype}{int} valueOpen;}
+\DoxyCodeLine{89     \textcolor{keywordtype}{int} valueClose;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \mbox{\hyperlink{class_control_window}{ControlWindow}}* window;}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{keyword}{public}:}
+\DoxyCodeLine{94     \mbox{\hyperlink{class_adapter_control_window}{AdapterControlWindow}}(\mbox{\hyperlink{class_control_window}{ControlWindow}}* window);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_adapter_control_window_a7ce5294a33917952ea10141dd05ec961}{on}}();}
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_adapter_control_window_aaf21236a22928cc643df1023750f0ecf}{off}}();}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} setValueOpen(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} setValueClose(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{101 \};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{106 \textcolor{keyword}{class }\mbox{\hyperlink{class_control_humidity}{ControlHumidity}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_control}{IControl}}}
+\DoxyCodeLine{107 \{}
+\DoxyCodeLine{108 \textcolor{keyword}{public}:}
+\DoxyCodeLine{109     \mbox{\hyperlink{class_control_humidity}{ControlHumidity}}();}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_humidity_aa3ad14237e95626eb58936b7de922025}{on}}();}
+\DoxyCodeLine{112     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_humidity_aef5fe0baf17c1abe655509b03088bf7e}{off}}();}
+\DoxyCodeLine{113 \};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{118 \textcolor{keyword}{class }\mbox{\hyperlink{class_control_soil_humidity}{ControlSoilHumidity}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_control}{IControl}}}
+\DoxyCodeLine{119 \{}
+\DoxyCodeLine{120 \textcolor{keyword}{public}:}
+\DoxyCodeLine{121     \mbox{\hyperlink{class_control_soil_humidity}{ControlSoilHumidity}}();}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_soil_humidity_a05b896ebbdc0968ebc2c393b3b12baa5}{on}}();}
+\DoxyCodeLine{124     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_soil_humidity_a58c53e210ca903fc0bee23fa33373a75}{off}}();}
+\DoxyCodeLine{125 \};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{130 \textcolor{keyword}{class }\mbox{\hyperlink{class_control_c_o2}{ControlCO2}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_control}{IControl}}}
+\DoxyCodeLine{131 \{}
+\DoxyCodeLine{132 \textcolor{keyword}{public}:}
+\DoxyCodeLine{133     \mbox{\hyperlink{class_control_c_o2}{ControlCO2}}();}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_c_o2_a9f2206f2642c392b5df01543c11523a6}{on}}();}
+\DoxyCodeLine{136     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control_c_o2_a70f38b8237094f60ce1117da736aecb2}{off}}();}
+\DoxyCodeLine{137 \};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 }
+
+\end{DoxyCode}

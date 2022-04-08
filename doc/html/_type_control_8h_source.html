@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Greenhouse: Исходный файл TypeControl.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Greenhouse<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TypeControl.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_type_control_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4a">   12</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4a">TypeControl</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aad690e15341e1a5100e4a9e1fdc0e9575">Heater</a>,                 </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aa19dfae8b059ee13da8388413830c5bde">Cooler</a>,                 </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aa9914a0ce04a7b7b6a8e39bec55064b82">Light</a>,                  </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aaddab800b54d009aa0408ebb9a4ee418d">Humidity</a>,               </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aae693e142b94290f51758932db1a5aa54">SoilHumidity</a>,           </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aa05f338756c3795e0fe583df923cd6a65">CO2</a>,                    </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aac89686a387d2b12b3c729ce35a0bcb5b">Window</a>,                 </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aaa45da96d0bf6575970f2d27af22be28a">System</a>                  </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="_type_control_8h.html#ad4caccfcb24db661f001ca6f9cb08f9e">   29</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="_type_control_8h.html#ad4caccfcb24db661f001ca6f9cb08f9e">TypeControlToStr</a>(<a class="code hl_enumeration" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4a">TypeControl</a> type)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::map&lt;TypeControl, std::string&gt; nameSensor</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {<a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aad690e15341e1a5100e4a9e1fdc0e9575">TypeControl::Heater</a>, <span class="stringliteral">&quot;Heater&quot;</span>},</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {<a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aa9914a0ce04a7b7b6a8e39bec55064b82">TypeControl::Light</a>, <span class="stringliteral">&quot;Light&quot;</span>},</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {<a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aaddab800b54d009aa0408ebb9a4ee418d">TypeControl::Humidity</a>, <span class="stringliteral">&quot;Humidity&quot;</span>},</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {<a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aae693e142b94290f51758932db1a5aa54">TypeControl::SoilHumidity</a>, <span class="stringliteral">&quot;Valve_water&quot;</span>},</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {<a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aa05f338756c3795e0fe583df923cd6a65">TypeControl::CO2</a>, <span class="stringliteral">&quot;Valve_CO2&quot;</span>},</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {<a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aa19dfae8b059ee13da8388413830c5bde">TypeControl::Cooler</a>, <span class="stringliteral">&quot;Cooler&quot;</span>},</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        {<a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aac89686a387d2b12b3c729ce35a0bcb5b">TypeControl::Window</a>, <span class="stringliteral">&quot;Window&quot;</span>},</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        {<a class="code hl_enumvalue" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aaa45da96d0bf6575970f2d27af22be28a">TypeControl::System</a>, <span class="stringliteral">&quot;System&quot;</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> nameSensor.at(type);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="ttc" id="a_type_control_8h_html_ad4caccfcb24db661f001ca6f9cb08f9e"><div class="ttname"><a href="_type_control_8h.html#ad4caccfcb24db661f001ca6f9cb08f9e">TypeControlToStr</a></div><div class="ttdeci">std::string TypeControlToStr(TypeControl type)</div><div class="ttdoc">Метод для сопоставление TypeControl с данными тима std::string.</div><div class="ttdef"><b>Definition:</b> TypeControl.h:29</div></div>
+<div class="ttc" id="a_type_control_8h_html_af2518c4f7a6c1190240b3370c418fb4a"><div class="ttname"><a href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4a">TypeControl</a></div><div class="ttdeci">TypeControl</div><div class="ttdef"><b>Definition:</b> TypeControl.h:13</div></div>
+<div class="ttc" id="a_type_control_8h_html_af2518c4f7a6c1190240b3370c418fb4aa05f338756c3795e0fe583df923cd6a65"><div class="ttname"><a href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aa05f338756c3795e0fe583df923cd6a65">TypeControl::CO2</a></div><div class="ttdeci">@ CO2</div><div class="ttdoc">Кран углекислого газа</div></div>
+<div class="ttc" id="a_type_control_8h_html_af2518c4f7a6c1190240b3370c418fb4aa19dfae8b059ee13da8388413830c5bde"><div class="ttname"><a href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aa19dfae8b059ee13da8388413830c5bde">TypeControl::Cooler</a></div><div class="ttdeci">@ Cooler</div><div class="ttdoc">Кондиционер</div></div>
+<div class="ttc" id="a_type_control_8h_html_af2518c4f7a6c1190240b3370c418fb4aa9914a0ce04a7b7b6a8e39bec55064b82"><div class="ttname"><a href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aa9914a0ce04a7b7b6a8e39bec55064b82">TypeControl::Light</a></div><div class="ttdeci">@ Light</div><div class="ttdoc">Освещение</div></div>
+<div class="ttc" id="a_type_control_8h_html_af2518c4f7a6c1190240b3370c418fb4aaa45da96d0bf6575970f2d27af22be28a"><div class="ttname"><a href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aaa45da96d0bf6575970f2d27af22be28a">TypeControl::System</a></div><div class="ttdeci">@ System</div><div class="ttdoc">Системный контроллер</div></div>
+<div class="ttc" id="a_type_control_8h_html_af2518c4f7a6c1190240b3370c418fb4aac89686a387d2b12b3c729ce35a0bcb5b"><div class="ttname"><a href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aac89686a387d2b12b3c729ce35a0bcb5b">TypeControl::Window</a></div><div class="ttdeci">@ Window</div><div class="ttdoc">Управление окном</div></div>
+<div class="ttc" id="a_type_control_8h_html_af2518c4f7a6c1190240b3370c418fb4aad690e15341e1a5100e4a9e1fdc0e9575"><div class="ttname"><a href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aad690e15341e1a5100e4a9e1fdc0e9575">TypeControl::Heater</a></div><div class="ttdeci">@ Heater</div><div class="ttdoc">Обогреватель</div></div>
+<div class="ttc" id="a_type_control_8h_html_af2518c4f7a6c1190240b3370c418fb4aaddab800b54d009aa0408ebb9a4ee418d"><div class="ttname"><a href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aaddab800b54d009aa0408ebb9a4ee418d">TypeControl::Humidity</a></div><div class="ttdeci">@ Humidity</div><div class="ttdoc">Увлажнитель воздуха</div></div>
+<div class="ttc" id="a_type_control_8h_html_af2518c4f7a6c1190240b3370c418fb4aae693e142b94290f51758932db1a5aa54"><div class="ttname"><a href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4aae693e142b94290f51758932db1a5aa54">TypeControl::SoilHumidity</a></div><div class="ttdeci">@ SoilHumidity</div><div class="ttdoc">Кран воды</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Greenhouse: Класс IStrategy</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Greenhouse<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_i_strategy-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс IStrategy<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Интерфес стратегии (режим работы).  
+ <a href="class_i_strategy.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_main_system_8h_source.html">MainSystem.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:IStrategy:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_strategy__inherit__graph.png" border="0" usemap="#a_i_strategy_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_i_strategy_inherit__map" id="a_i_strategy_inherit__map">
+<area shape="rect" title="Интерфес стратегии (режим работы)." alt="" coords="93,5,179,83"/>
+<area shape="rect" href="class_eco_strategy.html" title="Экономичный режим работы." alt="" coords="5,131,120,223"/>
+<area shape="rect" href="class_normal_strategy.html" title="Обычный режим работы." alt="" coords="145,131,277,223"/>
+</map>
+</div>
+<div class="dynheader">
+Граф связей класса IStrategy:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_strategy__coll__graph.png" border="0" usemap="#a_i_strategy_coll__map" alt="Collaboration graph"/></div>
+<map name="a_i_strategy_coll__map" id="a_i_strategy_coll__map">
+<area shape="rect" title="Интерфес стратегии (режим работы)." alt="" coords="5,5,92,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ae9df2b236001faeb29fbb024ebe33756"><td class="memItemLeft" align="right" valign="top">virtual list&lt; pair&lt; <a class="el" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4a">TypeControl</a>, <a class="el" href="_type_status_8h.html#a58ec645a8af2e639f20c750ca31a504e">TypeStatus</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_strategy.html#ae9df2b236001faeb29fbb024ebe33756">solution</a> (<a class="el" href="class_data_climat.html">DataClimat</a> climat, <a class="el" href="class_data_climat.html">DataClimat</a> greenhouse, <a class="el" href="class_culture.html">Culture</a> *culture)=0</td></tr>
+<tr class="memdesc:ae9df2b236001faeb29fbb024ebe33756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виртуальный метод по принятию решения. Решение зависит от климатических параметров и типа реализации данного метода в дочерних классах от <a class="el" href="class_i_strategy.html" title="Интерфес стратегии (режим работы).">IStrategy</a>.  <a href="class_i_strategy.html#ae9df2b236001faeb29fbb024ebe33756">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae9df2b236001faeb29fbb024ebe33756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Интерфес стратегии (режим работы). </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="ae9df2b236001faeb29fbb024ebe33756" name="ae9df2b236001faeb29fbb024ebe33756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9df2b236001faeb29fbb024ebe33756">&#9670;&nbsp;</a></span>solution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual list&lt; pair&lt; <a class="el" href="_type_control_8h.html#af2518c4f7a6c1190240b3370c418fb4a">TypeControl</a>, <a class="el" href="_type_status_8h.html#a58ec645a8af2e639f20c750ca31a504e">TypeStatus</a> &gt; &gt; IStrategy::solution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_data_climat.html">DataClimat</a>&#160;</td>
+          <td class="paramname"><em>climat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_data_climat.html">DataClimat</a>&#160;</td>
+          <td class="paramname"><em>greenhouse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_culture.html">Culture</a> *&#160;</td>
+          <td class="paramname"><em>culture</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Виртуальный метод по принятию решения. Решение зависит от климатических параметров и типа реализации данного метода в дочерних классах от <a class="el" href="class_i_strategy.html" title="Интерфес стратегии (режим работы).">IStrategy</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">climat</td><td>Параметры уличного климата.</td></tr>
+    <tr><td class="paramname">greenhouse</td><td>Параметры климата в теплице.</td></tr>
+    <tr><td class="paramname">culture</td><td>Указатель на культуру которая посажена в теплице.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Принятое решение в виде списка пар: "Контролер" - "Необходимое состояние контроллера".</dd></dl>
+
+<p>Замещается в <a class="el" href="class_normal_strategy.html#ae5ec94c6488229a0df583687c9823799">NormalStrategy</a> и <a class="el" href="class_eco_strategy.html#ab062853c53a26d1753a2990ffb4e32de">EcoStrategy</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_strategy_ae9df2b236001faeb29fbb024ebe33756_icgraph.png" border="0" usemap="#aclass_i_strategy_ae9df2b236001faeb29fbb024ebe33756_icgraph" alt=""/></div>
+<map name="aclass_i_strategy_ae9df2b236001faeb29fbb024ebe33756_icgraph" id="aclass_i_strategy_ae9df2b236001faeb29fbb024ebe33756_icgraph">
+<area shape="rect" title="Виртуальный метод по принятию решения. Решение зависит от климатических параметров и типа реализации ..." alt="" coords="251,5,377,32"/>
+<area shape="rect" href="class_main_system.html#a7d0a9f8665ae2c6a6c6970ac8a6da813" title="Воспользоваться стратегией." alt="" coords="5,5,203,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="_main_system_8h_source.html">MainSystem.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

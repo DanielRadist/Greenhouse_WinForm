@@ -1,0 +1,5 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$class_i_system_builder.html" title="Интерфес строителя систем: SystemSensor и SystemControl." alt="" coords="5,31,116,57"/>
+<area shape="rect" id="node2" href="$class_system_control_builder.html" title="Строитель системы контроля климата" alt="" coords="164,5,312,32"/>
+<area shape="rect" id="node3" href="$class_system_sensor_builder.html" title="Строитель системы датчиков (сенсоров) климата" alt="" coords="164,56,312,83"/>
+</map>

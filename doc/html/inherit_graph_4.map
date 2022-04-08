@@ -1,0 +1,10 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$class_i_control.html" title="Интерфес контроллеров." alt="" coords="5,157,72,184"/>
+<area shape="rect" id="node2" href="$class_adapter_control_window.html" title="Адептр окна теплицы." alt="" coords="120,5,275,32"/>
+<area shape="rect" id="node3" href="$class_control_c_o2.html" title="Кран подачи СО2." alt="" coords="153,56,242,83"/>
+<area shape="rect" id="node4" href="$class_control_cooler.html" title="Кондиционер." alt="" coords="147,107,247,133"/>
+<area shape="rect" id="node5" href="$class_control_heater.html" title="Обогреватель." alt="" coords="147,157,248,184"/>
+<area shape="rect" id="node6" href="$class_control_humidity.html" title="Увлажнитель." alt="" coords="140,208,255,235"/>
+<area shape="rect" id="node7" href="$class_control_light.html" title="Искусственный свет." alt="" coords="152,259,243,285"/>
+<area shape="rect" id="node8" href="$class_control_soil_humidity.html" title="Кран полива." alt="" coords="129,309,265,336"/>
+</map>

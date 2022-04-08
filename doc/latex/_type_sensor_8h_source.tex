@@ -1,0 +1,32 @@
+\hypertarget{_type_sensor_8h_source}{}\doxysection{Type\+Sensor.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{enum class} TypeSensor}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     Temperature,            \textcolor{comment}{// датчик температуры}}
+\DoxyCodeLine{8     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aa9914a0ce04a7b7b6a8e39bec55064b82}{Light}},                 \textcolor{comment}{// датчик освещенности}}
+\DoxyCodeLine{9     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aaddab800b54d009aa0408ebb9a4ee418d}{Humidity}},               \textcolor{comment}{// датчик влажности}}
+\DoxyCodeLine{10     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aa05f338756c3795e0fe583df923cd6a65}{CO2}},                 \textcolor{comment}{// датчик углекислого газа}}
+\DoxyCodeLine{11     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aae693e142b94290f51758932db1a5aa54}{SoilHumidity}},           \textcolor{comment}{// датчик влажности почвы}}
+\DoxyCodeLine{12     System}
+\DoxyCodeLine{13 \};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{inline} std::string TypeSensorToStr(TypeSensor type)}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     std::map<TypeSensor, std::string> nameSensor}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         \{TypeSensor::Temperature, \textcolor{stringliteral}{"{}Temperature"{}}\},}
+\DoxyCodeLine{20         \{TypeSensor::Light, \textcolor{stringliteral}{"{}Light"{}}\},}
+\DoxyCodeLine{21         \{TypeSensor::Humidity, \textcolor{stringliteral}{"{}Humidity"{}}\},}
+\DoxyCodeLine{22         \{TypeSensor::CO2, \textcolor{stringliteral}{"{}CO2"{}}\},}
+\DoxyCodeLine{23         \{TypeSensor::SoilHumidity, \textcolor{stringliteral}{"{}Soil\_Humidity"{}}\},}
+\DoxyCodeLine{24         \{TypeSensor::System, \textcolor{stringliteral}{"{}System"{}}\}}
+\DoxyCodeLine{25     \};}
+\DoxyCodeLine{26     \textcolor{keywordflow}{return} nameSensor.at(type);}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}

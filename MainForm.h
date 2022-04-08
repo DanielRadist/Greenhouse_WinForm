@@ -11,7 +11,7 @@
 #include "DataSource.h"
 
 
-namespace Greenhouse 
+namespace Greenhouse
 {
 	using namespace System;
 	using namespace System::IO;
@@ -66,7 +66,7 @@ namespace Greenhouse
 
 			logUpdate();
 
-			
+
 			Log::add("WARNING. Выберети режим работы. ");
 			logUpdate();
 		}
@@ -131,7 +131,7 @@ namespace Greenhouse
 					std::string tmp = toStdString(line);
 					std::stringstream ss(tmp);
 
-					
+
 
 					std::string namePar, minPar, maxPar;
 					ss >> namePar;
@@ -227,7 +227,7 @@ namespace Greenhouse
 
 	public:
 
-		
+
 		void logUpdate()
 		{
 			while (Log::size() != 0)
@@ -270,7 +270,7 @@ namespace Greenhouse
 			return t;
 		}
 
-	
+
 
 	private: System::Windows::Forms::GroupBox^ groupBoxMeteoStation;
 	private: System::Windows::Forms::GroupBox^ groupBoxGreenHouse;
@@ -314,7 +314,7 @@ namespace Greenhouse
 
 	private:
 
-		
+
 	private: System::Windows::Forms::ComboBox^ comboBoxСulture;
 	private: System::Windows::Forms::TextBox^ textBoxСulture;
 
@@ -322,7 +322,7 @@ namespace Greenhouse
 		/// <summary>
 		/// Обязательная переменная конструктора.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -332,7 +332,7 @@ namespace Greenhouse
 		void InitializeComponent(void);
 #pragma endregion
 
-	private: System::Void radioButtonNormalStrategy_CheckedChanged(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void radioButtonNormalStrategy_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		if (radioButtonNormalStrategy->Checked == true)
 		{
@@ -341,7 +341,7 @@ namespace Greenhouse
 			goToSolution();
 		}
 	}
-	private: System::Void radioButtonEcoStrategy_CheckedChanged(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void radioButtonEcoStrategy_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		if (radioButtonEcoStrategy->Checked == true)
 		{
@@ -350,12 +350,12 @@ namespace Greenhouse
 			goToSolution();
 		}
 	}
-	private: System::Void comboBoxСulture_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void comboBoxСulture_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		std::string selectStr = toStdString(comboBoxСulture->SelectedItem->ToString());
 		selectCulture = cultures->at(selectStr);
 		textBoxСulture->Clear();
-		
+
 		std::string buf = "Требуемый климат: \r\n";
 
 		buf += "Темпер. : " + std::to_string(selectCulture->getMin(TypeSensor::Temperature)) + " : " + std::to_string(selectCulture->getMax(TypeSensor::Temperature)) + " *C" + "\r\n";
@@ -363,7 +363,7 @@ namespace Greenhouse
 		buf += "Ур. CO2 : " + std::to_string(selectCulture->getMin(TypeSensor::CO2)) + " : " + std::to_string(selectCulture->getMax(TypeSensor::CO2)) + " %" + "\r\n";
 		buf += "Воз. Вл.: " + std::to_string(selectCulture->getMin(TypeSensor::Humidity)) + " : " + std::to_string(selectCulture->getMax(TypeSensor::Humidity)) + " %" + "\r\n";
 		buf += "Поч. Вл.: " + std::to_string(selectCulture->getMin(TypeSensor::SoilHumidity)) + " : " + std::to_string(selectCulture->getMax(TypeSensor::SoilHumidity)) + " %";
-	
+
 		textBoxСulture->Text = toClrString(buf);
 
 		Log::add("ИЗМЕНЕНА КУЛЬТУРА! Изменена на: " + selectCulture->getName() + ". ");
@@ -371,7 +371,7 @@ namespace Greenhouse
 		goToSolution();
 	}
 
-	// Показатели климата теплицы
+		   // Показатели климата теплицы
 	private: System::Void numericGHTemperature_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 		goToSolution();
 	}
@@ -387,7 +387,7 @@ namespace Greenhouse
 	private: System::Void numericGHLight_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 		goToSolution();
 	}
-	// Покахатели климата с метеостанции
+		   // Покахатели климата с метеостанции
 	private: System::Void numericMSTemperature_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 		goToSolution();
 	}
@@ -397,11 +397,11 @@ namespace Greenhouse
 	private: System::Void numericMSco2_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 		goToSolution();
 	}
-private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
-	textBoxLog->ScrollToCaret();
-}
-private: System::Void MainForm_Shown(System::Object^ sender, System::EventArgs^ e) {
-	textBoxLog->ScrollToCaret();
-}
-};
+	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		textBoxLog->ScrollToCaret();
+	}
+	private: System::Void MainForm_Shown(System::Object^ sender, System::EventArgs^ e) {
+		textBoxLog->ScrollToCaret();
+	}
+	};
 }

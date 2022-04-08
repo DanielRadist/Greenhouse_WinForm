@@ -1,0 +1,8 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$class_sensor.html" title="Абстрактный класс &quot;Сенсор&quot;" alt="" coords="5,107,68,133"/>
+<area shape="rect" id="node2" href="$class_sensor_c_o2.html" title="Датчик уровня СО2 в воздухе." alt="" coords="139,5,229,32"/>
+<area shape="rect" id="node3" href="$class_sensor_humidity.html" title="Датчик влажности воздуха." alt="" coords="127,56,241,83"/>
+<area shape="rect" id="node4" href="$class_sensor_light.html" title="Датчик освещенности." alt="" coords="139,107,229,133"/>
+<area shape="rect" id="node5" href="$class_sensor_soil_humidity.html" title="Датчик влажности почвы." alt="" coords="116,157,252,184"/>
+<area shape="rect" id="node6" href="$class_sensor_temperature.html" title="Термометр." alt="" coords="117,208,251,235"/>
+</map>

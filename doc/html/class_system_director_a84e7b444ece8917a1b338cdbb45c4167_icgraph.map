@@ -1,0 +1,4 @@
+<map id="SystemDirector::makeSystemSensor" name="SystemDirector::makeSystemSensor">
+<area shape="rect" id="node1" title="Метод, в реализации которого заложен приниц создания объекта SystemSensor для теплицы." alt="" coords="229,5,427,47"/>
+<area shape="rect" id="node2" href="$class_main_system.html#aed9d007c8b9294f4ff8d578675d53b22" title="Конструктор системы." alt="" coords="5,13,181,39"/>
+</map>

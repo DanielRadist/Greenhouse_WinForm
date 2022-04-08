@@ -1,0 +1,19 @@
+digraph "DataClimat::setData"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="DataClimat::setData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MeteoStation::getData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_meteo_station.html#a649bec5862f8c56d3b10ea88785e8f93",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MainSystem::solutionStrategy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_main_system.html#a7d0a9f8665ae2c6a6c6970ac8a6da813",tooltip="воспользоваться стратегией"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SystemSensor::getDataClimat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_system_sensor.html#adf7a0394d0bcfcabae923df97a5221c8",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Greenhouse::MainForm\l::loadCulture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_greenhouse_1_1_main_form.html#a0d745ae1becdb72d3203f79751064cc8",tooltip="Загрузка из файла списка культур в comboBox и их характеристик в список сultures"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Greenhouse::MainForm\l::MainForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_greenhouse_1_1_main_form.html#a5502e54703f86e37f266a9dbd2950bb6",tooltip=" "];
+}

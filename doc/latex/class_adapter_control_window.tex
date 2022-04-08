@@ -1,0 +1,87 @@
+\hypertarget{class_adapter_control_window}{}\doxysection{Класс Adapter\+Control\+Window}
+\label{class_adapter_control_window}\index{AdapterControlWindow@{AdapterControlWindow}}
+
+
+Адептр окна теплицы.  
+
+
+
+
+{\ttfamily \#include $<$Control.\+h$>$}
+
+Граф наследования\+:Adapter\+Control\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_adapter_control_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_adapter_control_window_ae5c5be017917a75bb99abfd6ca65715b}\label{class_adapter_control_window_ae5c5be017917a75bb99abfd6ca65715b}} 
+{\bfseries Adapter\+Control\+Window} (\mbox{\hyperlink{class_control_window}{Control\+Window}} $\ast$window)
+\item 
+void \mbox{\hyperlink{class_adapter_control_window_a7ce5294a33917952ea10141dd05ec961}{on}} ()
+\begin{DoxyCompactList}\small\item\em Включение. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_adapter_control_window_aaf21236a22928cc643df1023750f0ecf}{off}} ()
+\begin{DoxyCompactList}\small\item\em Выключение. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_adapter_control_window_a7c5c835cb6452c6b80fefe5fc0359079}\label{class_adapter_control_window_a7c5c835cb6452c6b80fefe5fc0359079}} 
+void {\bfseries set\+Value\+Open} (int value)
+\item 
+\mbox{\Hypertarget{class_adapter_control_window_abae9f5400f475840787ee84071e56a4b}\label{class_adapter_control_window_abae9f5400f475840787ee84071e56a4b}} 
+void {\bfseries set\+Value\+Close} (int value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_adapter_control_window_aabef5f41e7736121baec82efb6030c20}\label{class_adapter_control_window_aabef5f41e7736121baec82efb6030c20}} 
+int {\bfseries value\+Open}
+\item 
+\mbox{\Hypertarget{class_adapter_control_window_a387d26c7846505ae4bf94e7ba977737f}\label{class_adapter_control_window_a387d26c7846505ae4bf94e7ba977737f}} 
+int {\bfseries value\+Close}
+\item 
+\mbox{\Hypertarget{class_adapter_control_window_a69dcc63e0ff81584161a2b9fa7399d80}\label{class_adapter_control_window_a69dcc63e0ff81584161a2b9fa7399d80}} 
+\mbox{\hyperlink{class_control_window}{Control\+Window}} $\ast$ {\bfseries window}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Адептр окна теплицы. 
+
+Данный класс наследуется от интерфеса IContorl. Необходим для совместимости класса \mbox{\hyperlink{class_control_window}{Control\+Window}} в проекте. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_adapter_control_window_aaf21236a22928cc643df1023750f0ecf}\label{class_adapter_control_window_aaf21236a22928cc643df1023750f0ecf}} 
+\index{AdapterControlWindow@{AdapterControlWindow}!off@{off}}
+\index{off@{off}!AdapterControlWindow@{AdapterControlWindow}}
+\doxysubsubsection{\texorpdfstring{off()}{off()}}
+{\footnotesize\ttfamily void Adapter\+Control\+Window\+::off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Выключение. 
+
+Выключение физического устройства управляемого контроллером. 
+
+Замещает \mbox{\hyperlink{class_i_control_aca3bdb6d44dafb4541868df330496650}{IControl}}.
+
+\mbox{\Hypertarget{class_adapter_control_window_a7ce5294a33917952ea10141dd05ec961}\label{class_adapter_control_window_a7ce5294a33917952ea10141dd05ec961}} 
+\index{AdapterControlWindow@{AdapterControlWindow}!on@{on}}
+\index{on@{on}!AdapterControlWindow@{AdapterControlWindow}}
+\doxysubsubsection{\texorpdfstring{on()}{on()}}
+{\footnotesize\ttfamily void Adapter\+Control\+Window\+::on (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Включение. 
+
+Включение физического устройства управляемого контроллером. 
+
+Замещает \mbox{\hyperlink{class_i_control_ae607abaeea282bf06e49bd8afe67f7bd}{IControl}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+Control.\+h\item 
+Control.\+cpp\end{DoxyCompactItemize}

@@ -24,10 +24,6 @@ public:
 
 private:
 
-	/// <summary>
-	/// Получение текущего времени системы. В формате.
-	/// </summary>
-	/// <returns>строка</returns>
 	std::string getCurrentTime();
 };
 

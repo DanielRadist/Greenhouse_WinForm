@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Greenhouse: Класс SystemDirector</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Greenhouse<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="class_system_director-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс SystemDirector</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Директор классов строителей унаследованных от интерфеса <a class="el" href="class_i_system_builder.html" title="Интерфес строителя систем: SystemSensor и SystemControl.">ISystemBuilder</a>.  
+ <a href="class_system_director.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_system_builder_8h_source.html">SystemBuilder.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса SystemDirector:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_system_director__coll__graph.png" border="0" usemap="#a_system_director_coll__map" alt="Collaboration graph"/></div>
+<map name="a_system_director_coll__map" id="a_system_director_coll__map">
+<area shape="rect" title="Директор классов строителей унаследованных от интерфеса ISystemBuilder." alt="" coords="5,5,165,127"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a84e7b444ece8917a1b338cdbb45c4167"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_system_director.html#a84e7b444ece8917a1b338cdbb45c4167">makeSystemSensor</a> (<a class="el" href="class_i_system_builder.html">ISystemBuilder</a> *builder)</td></tr>
+<tr class="memdesc:a84e7b444ece8917a1b338cdbb45c4167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, в реализации которого заложен приниц создания объекта <a class="el" href="class_system_sensor.html" title="Система сенсоров. Связующая часть между MainSystem и дочерними классами от Sensor.">SystemSensor</a> для теплицы.  <a href="class_system_director.html#a84e7b444ece8917a1b338cdbb45c4167">Подробнее...</a><br /></td></tr>
+<tr class="separator:a84e7b444ece8917a1b338cdbb45c4167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac118ae301c556ef4d72d3da457b457a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_system_director.html#ac118ae301c556ef4d72d3da457b457a8">makeSystemControl</a> (<a class="el" href="class_i_system_builder.html">ISystemBuilder</a> *builder)</td></tr>
+<tr class="memdesc:ac118ae301c556ef4d72d3da457b457a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, в реализации которого заложен приниц создания объекта <a class="el" href="class_system_control.html" title="Система контроллеров. Связующая часть между MainSystem и дочерними классами от IControl.">SystemControl</a> для теплицы.  <a href="class_system_director.html#ac118ae301c556ef4d72d3da457b457a8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac118ae301c556ef4d72d3da457b457a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a98295882d87874f008047fb884a42421"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_system_director.html">SystemDirector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_system_director.html#a98295882d87874f008047fb884a42421">Instance</a> ()</td></tr>
+<tr class="memdesc:a98295882d87874f008047fb884a42421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статический метод для получения экземпляра класса.  <a href="class_system_director.html#a98295882d87874f008047fb884a42421">Подробнее...</a><br /></td></tr>
+<tr class="separator:a98295882d87874f008047fb884a42421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Директор классов строителей унаследованных от интерфеса <a class="el" href="class_i_system_builder.html" title="Интерфес строителя систем: SystemSensor и SystemControl.">ISystemBuilder</a>. </p>
+<p >Данный класс использует методы дочерних классов от интерфеса <a class="el" href="class_i_system_builder.html" title="Интерфес строителя систем: SystemSensor и SystemControl.">ISystemBuilder</a> для создания систем климата теплицы. Является классом одиночкой. Для получения объекта используйте статический метод <a class="el" href="class_system_director.html#a98295882d87874f008047fb884a42421" title="Статический метод для получения экземпляра класса.">Instance()</a>. Является частью паттерна "Строитель". </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a98295882d87874f008047fb884a42421" name="a98295882d87874f008047fb884a42421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98295882d87874f008047fb884a42421">&#9670;&nbsp;</a></span>Instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_system_director.html">SystemDirector</a> * SystemDirector::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Статический метод для получения экземпляра класса. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Возвращает указатель на объект <a class="el" href="class_system_director.html" title="Директор классов строителей унаследованных от интерфеса ISystemBuilder.">SystemDirector</a>.</dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_system_director_a98295882d87874f008047fb884a42421_icgraph.png" border="0" usemap="#aclass_system_director_a98295882d87874f008047fb884a42421_icgraph" alt=""/></div>
+<map name="aclass_system_director_a98295882d87874f008047fb884a42421_icgraph" id="aclass_system_director_a98295882d87874f008047fb884a42421_icgraph">
+<area shape="rect" title="Статический метод для получения экземпляра класса." alt="" coords="229,5,399,32"/>
+<area shape="rect" href="class_main_system.html#aed9d007c8b9294f4ff8d578675d53b22" title="Конструктор системы." alt="" coords="5,5,181,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac118ae301c556ef4d72d3da457b457a8" name="ac118ae301c556ef4d72d3da457b457a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac118ae301c556ef4d72d3da457b457a8">&#9670;&nbsp;</a></span>makeSystemControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemDirector::makeSystemControl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_system_builder.html">ISystemBuilder</a> *&#160;</td>
+          <td class="paramname"><em>builder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод, в реализации которого заложен приниц создания объекта <a class="el" href="class_system_control.html" title="Система контроллеров. Связующая часть между MainSystem и дочерними классами от IControl.">SystemControl</a> для теплицы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">builder</td><td>Указатель на объект <a class="el" href="class_system_control.html" title="Система контроллеров. Связующая часть между MainSystem и дочерними классами от IControl.">SystemControl</a> без контроллеров</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_system_director_ac118ae301c556ef4d72d3da457b457a8_cgraph.png" border="0" usemap="#aclass_system_director_ac118ae301c556ef4d72d3da457b457a8_cgraph" alt=""/></div>
+<map name="aclass_system_director_ac118ae301c556ef4d72d3da457b457a8_cgraph" id="aclass_system_director_ac118ae301c556ef4d72d3da457b457a8_cgraph">
+<area shape="rect" title="Метод, в реализации которого заложен приниц создания объекта SystemControl для теплицы." alt="" coords="5,150,203,191"/>
+<area shape="rect" href="class_i_system_builder.html#a55792bab07eaca13a5f27bb8e2f8638a" title="Создание сенсора / контроллера уровня СО2." alt="" coords="263,5,439,32"/>
+<area shape="rect" href="class_i_system_builder.html#aa099b15d56c21c97248814a97e58fcd1" title="Создание контроллера кондиционера." alt="" coords="258,56,445,83"/>
+<area shape="rect" href="class_i_system_builder.html#acbe596526671eb6735599b5fc1a99d2e" title="Создание контроллера нагревателя." alt="" coords="257,107,445,133"/>
+<area shape="rect" href="class_i_system_builder.html#ad143fbddd6363987e1f954530b35d296" title="Создание сенсора / контроллера влажности." alt="" coords="251,157,452,184"/>
+<area shape="rect" href="class_i_system_builder.html#aa3122ccee660cfaf1da73347b8d043ad" title="Создание сенсора / контроллера освещенности." alt="" coords="262,208,441,235"/>
+<area shape="rect" href="class_i_system_builder.html#aca2f7b8005f751d24b1fdbff9b2aa39d" title="Создание сенсора / контроллера влажности почвы." alt="" coords="265,259,437,301"/>
+<area shape="rect" href="class_i_system_builder.html#aaedf37329a6d2490cd7f2d2abad3a50c" title="Создание контроллера управления окном." alt="" coords="253,325,449,352"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_system_director_ac118ae301c556ef4d72d3da457b457a8_icgraph.png" border="0" usemap="#aclass_system_director_ac118ae301c556ef4d72d3da457b457a8_icgraph" alt=""/></div>
+<map name="aclass_system_director_ac118ae301c556ef4d72d3da457b457a8_icgraph" id="aclass_system_director_ac118ae301c556ef4d72d3da457b457a8_icgraph">
+<area shape="rect" title="Метод, в реализации которого заложен приниц создания объекта SystemControl для теплицы." alt="" coords="229,5,427,47"/>
+<area shape="rect" href="class_main_system.html#aed9d007c8b9294f4ff8d578675d53b22" title="Конструктор системы." alt="" coords="5,13,181,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a84e7b444ece8917a1b338cdbb45c4167" name="a84e7b444ece8917a1b338cdbb45c4167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e7b444ece8917a1b338cdbb45c4167">&#9670;&nbsp;</a></span>makeSystemSensor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemDirector::makeSystemSensor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_system_builder.html">ISystemBuilder</a> *&#160;</td>
+          <td class="paramname"><em>builder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод, в реализации которого заложен приниц создания объекта <a class="el" href="class_system_sensor.html" title="Система сенсоров. Связующая часть между MainSystem и дочерними классами от Sensor.">SystemSensor</a> для теплицы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">builder</td><td>Указатель на объект <a class="el" href="class_system_sensor.html" title="Система сенсоров. Связующая часть между MainSystem и дочерними классами от Sensor.">SystemSensor</a> без сенсоров</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_system_director_a84e7b444ece8917a1b338cdbb45c4167_cgraph.png" border="0" usemap="#aclass_system_director_a84e7b444ece8917a1b338cdbb45c4167_cgraph" alt=""/></div>
+<map name="aclass_system_director_a84e7b444ece8917a1b338cdbb45c4167_cgraph" id="aclass_system_director_a84e7b444ece8917a1b338cdbb45c4167_cgraph">
+<area shape="rect" title="Метод, в реализации которого заложен приниц создания объекта SystemSensor для теплицы." alt="" coords="5,99,203,141"/>
+<area shape="rect" href="class_i_system_builder.html#a55792bab07eaca13a5f27bb8e2f8638a" title="Создание сенсора / контроллера уровня СО2." alt="" coords="274,5,450,32"/>
+<area shape="rect" href="class_i_system_builder.html#ad143fbddd6363987e1f954530b35d296" title="Создание сенсора / контроллера влажности." alt="" coords="261,56,463,83"/>
+<area shape="rect" href="class_i_system_builder.html#aa3122ccee660cfaf1da73347b8d043ad" title="Создание сенсора / контроллера освещенности." alt="" coords="273,107,451,133"/>
+<area shape="rect" href="class_i_system_builder.html#aca2f7b8005f751d24b1fdbff9b2aa39d" title="Создание сенсора / контроллера влажности почвы." alt="" coords="276,158,448,199"/>
+<area shape="rect" href="class_i_system_builder.html#ac056d24f50d2821eca884ec5fc353963" title="Создание сенсора температуры." alt="" coords="251,224,473,251"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_system_director_a84e7b444ece8917a1b338cdbb45c4167_icgraph.png" border="0" usemap="#aclass_system_director_a84e7b444ece8917a1b338cdbb45c4167_icgraph" alt=""/></div>
+<map name="aclass_system_director_a84e7b444ece8917a1b338cdbb45c4167_icgraph" id="aclass_system_director_a84e7b444ece8917a1b338cdbb45c4167_icgraph">
+<area shape="rect" title="Метод, в реализации которого заложен приниц создания объекта SystemSensor для теплицы." alt="" coords="229,5,427,47"/>
+<area shape="rect" href="class_main_system.html#aed9d007c8b9294f4ff8d578675d53b22" title="Конструктор системы." alt="" coords="5,13,181,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="_system_builder_8h_source.html">SystemBuilder.h</a></li>
+<li>SystemBuilder.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

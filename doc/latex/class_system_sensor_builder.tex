@@ -1,0 +1,177 @@
+\hypertarget{class_system_sensor_builder}{}\doxysection{Класс System\+Sensor\+Builder}
+\label{class_system_sensor_builder}\index{SystemSensorBuilder@{SystemSensorBuilder}}
+
+
+Строитель системы датчиков (сенсоров) климата  
+
+
+
+
+{\ttfamily \#include $<$System\+Builder.\+h$>$}
+
+Граф наследования\+:System\+Sensor\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_system_sensor_builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_system_sensor_builder_a426e1748e31b56c0abf01a3d05b6c47e}{make\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Создание сенсора температуры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_sensor_builder_aea10c477bb582d0cefc2e18025e80f0e}{make\+Humidity}} ()
+\begin{DoxyCompactList}\small\item\em Создание сенсора влажности воздуха \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_sensor_builder_ab0dc068750d942b78fb967ccf5c339a9}{make\+CO2}} ()
+\begin{DoxyCompactList}\small\item\em Создание сенсора уровня СО2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_sensor_builder_ad1201084252b0346cd697c232862ff10}{make\+Soil\+Humidity}} ()
+\begin{DoxyCompactList}\small\item\em Создание сенсора влажности почвы \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_sensor_builder_ac0420b8b1370432c3d6102e6ef4875e2}{make\+Light}} ()
+\begin{DoxyCompactList}\small\item\em Создание сенсора уровня освещенности \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_sensor_builder_a5f3fd9619dc75e545f6b5b9f4cc25e42}{make\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Нет реализации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_sensor_builder_aaaa6e4666f0a4e8e4418fe8869c94e67}{make\+Cooler}} ()
+\begin{DoxyCompactList}\small\item\em Нет реализации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_sensor_builder_aaf78a7863d27a23b24c6a3b6f6d8e554}{make\+Heater}} ()
+\begin{DoxyCompactList}\small\item\em Нет реализации. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_sensor}{System\+Sensor}} $\ast$ \mbox{\hyperlink{class_system_sensor_builder_a4de914ae3b9cc7342114f617fbee9bcc}{get\+Result}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает указатель на дочерний класс интерфеса \mbox{\hyperlink{class_system_sensor}{System\+Sensor}} с созданными сенсорами. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Строитель системы датчиков (сенсоров) климата 
+
+Дочерний класс от интерфеса \mbox{\hyperlink{class_i_system_builder}{ISystem\+Builder}}. Содержит в себе реализацию некоторых виртуальных методов, необходимых для создания \mbox{\hyperlink{class_system_sensor}{System\+Sensor}}. Является частью паттерна \char`\"{}Строитель\char`\"{}. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_system_sensor_builder_a4de914ae3b9cc7342114f617fbee9bcc}\label{class_system_sensor_builder_a4de914ae3b9cc7342114f617fbee9bcc}} 
+\index{SystemSensorBuilder@{SystemSensorBuilder}!getResult@{getResult}}
+\index{getResult@{getResult}!SystemSensorBuilder@{SystemSensorBuilder}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_sensor}{System\+Sensor}} $\ast$ System\+Sensor\+Builder\+::get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает указатель на дочерний класс интерфеса \mbox{\hyperlink{class_system_sensor}{System\+Sensor}} с созданными сенсорами. 
+
+\begin{DoxyReturn}{Возвращает}
+Укахатель на объект \mbox{\hyperlink{class_system_sensor}{System\+Sensor}} со своим набором сенсоров.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_system_sensor_builder_ab0dc068750d942b78fb967ccf5c339a9}\label{class_system_sensor_builder_ab0dc068750d942b78fb967ccf5c339a9}} 
+\index{SystemSensorBuilder@{SystemSensorBuilder}!makeCO2@{makeCO2}}
+\index{makeCO2@{makeCO2}!SystemSensorBuilder@{SystemSensorBuilder}}
+\doxysubsubsection{\texorpdfstring{makeCO2()}{makeCO2()}}
+{\footnotesize\ttfamily void System\+Sensor\+Builder\+::make\+CO2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание сенсора уровня СО2. 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_a55792bab07eaca13a5f27bb8e2f8638a}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_sensor_builder_aaaa6e4666f0a4e8e4418fe8869c94e67}\label{class_system_sensor_builder_aaaa6e4666f0a4e8e4418fe8869c94e67}} 
+\index{SystemSensorBuilder@{SystemSensorBuilder}!makeCooler@{makeCooler}}
+\index{makeCooler@{makeCooler}!SystemSensorBuilder@{SystemSensorBuilder}}
+\doxysubsubsection{\texorpdfstring{makeCooler()}{makeCooler()}}
+{\footnotesize\ttfamily void System\+Sensor\+Builder\+::make\+Cooler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Нет реализации. 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_aa099b15d56c21c97248814a97e58fcd1}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_sensor_builder_aaf78a7863d27a23b24c6a3b6f6d8e554}\label{class_system_sensor_builder_aaf78a7863d27a23b24c6a3b6f6d8e554}} 
+\index{SystemSensorBuilder@{SystemSensorBuilder}!makeHeater@{makeHeater}}
+\index{makeHeater@{makeHeater}!SystemSensorBuilder@{SystemSensorBuilder}}
+\doxysubsubsection{\texorpdfstring{makeHeater()}{makeHeater()}}
+{\footnotesize\ttfamily void System\+Sensor\+Builder\+::make\+Heater (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Нет реализации. 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_acbe596526671eb6735599b5fc1a99d2e}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_sensor_builder_aea10c477bb582d0cefc2e18025e80f0e}\label{class_system_sensor_builder_aea10c477bb582d0cefc2e18025e80f0e}} 
+\index{SystemSensorBuilder@{SystemSensorBuilder}!makeHumidity@{makeHumidity}}
+\index{makeHumidity@{makeHumidity}!SystemSensorBuilder@{SystemSensorBuilder}}
+\doxysubsubsection{\texorpdfstring{makeHumidity()}{makeHumidity()}}
+{\footnotesize\ttfamily void System\+Sensor\+Builder\+::make\+Humidity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание сенсора влажности воздуха 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_ad143fbddd6363987e1f954530b35d296}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_sensor_builder_ac0420b8b1370432c3d6102e6ef4875e2}\label{class_system_sensor_builder_ac0420b8b1370432c3d6102e6ef4875e2}} 
+\index{SystemSensorBuilder@{SystemSensorBuilder}!makeLight@{makeLight}}
+\index{makeLight@{makeLight}!SystemSensorBuilder@{SystemSensorBuilder}}
+\doxysubsubsection{\texorpdfstring{makeLight()}{makeLight()}}
+{\footnotesize\ttfamily void System\+Sensor\+Builder\+::make\+Light (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание сенсора уровня освещенности 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_aa3122ccee660cfaf1da73347b8d043ad}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_sensor_builder_ad1201084252b0346cd697c232862ff10}\label{class_system_sensor_builder_ad1201084252b0346cd697c232862ff10}} 
+\index{SystemSensorBuilder@{SystemSensorBuilder}!makeSoilHumidity@{makeSoilHumidity}}
+\index{makeSoilHumidity@{makeSoilHumidity}!SystemSensorBuilder@{SystemSensorBuilder}}
+\doxysubsubsection{\texorpdfstring{makeSoilHumidity()}{makeSoilHumidity()}}
+{\footnotesize\ttfamily void System\+Sensor\+Builder\+::make\+Soil\+Humidity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание сенсора влажности почвы 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_aca2f7b8005f751d24b1fdbff9b2aa39d}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_sensor_builder_a426e1748e31b56c0abf01a3d05b6c47e}\label{class_system_sensor_builder_a426e1748e31b56c0abf01a3d05b6c47e}} 
+\index{SystemSensorBuilder@{SystemSensorBuilder}!makeTemperature@{makeTemperature}}
+\index{makeTemperature@{makeTemperature}!SystemSensorBuilder@{SystemSensorBuilder}}
+\doxysubsubsection{\texorpdfstring{makeTemperature()}{makeTemperature()}}
+{\footnotesize\ttfamily void System\+Sensor\+Builder\+::make\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание сенсора температуры. 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_ac056d24f50d2821eca884ec5fc353963}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_sensor_builder_a5f3fd9619dc75e545f6b5b9f4cc25e42}\label{class_system_sensor_builder_a5f3fd9619dc75e545f6b5b9f4cc25e42}} 
+\index{SystemSensorBuilder@{SystemSensorBuilder}!makeWindow@{makeWindow}}
+\index{makeWindow@{makeWindow}!SystemSensorBuilder@{SystemSensorBuilder}}
+\doxysubsubsection{\texorpdfstring{makeWindow()}{makeWindow()}}
+{\footnotesize\ttfamily void System\+Sensor\+Builder\+::make\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Нет реализации. 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_aaedf37329a6d2490cd7f2d2abad3a50c}{ISystem\+Builder}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+System\+Builder.\+h\item 
+System\+Builder.\+cpp\end{DoxyCompactItemize}

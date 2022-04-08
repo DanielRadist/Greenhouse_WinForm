@@ -1,0 +1,4 @@
+<map id="ControlHeater" name="ControlHeater">
+<area shape="rect" id="node1" title="Обогреватель." alt="" coords="5,175,127,281"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="Интерфес контроллеров." alt="" coords="22,5,110,127"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="SystemControlBuilder" name="SystemControlBuilder">
+<area shape="rect" id="node1" title="Строитель системы контроля климата" alt="" coords="5,233,173,443"/>
+<area shape="rect" id="node2" href="$class_i_system_builder.html" title="Интерфес строителя систем: SystemSensor и SystemControl." alt="" coords="16,5,163,185"/>
+</map>

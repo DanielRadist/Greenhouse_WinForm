@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Greenhouse: Класс IState</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Greenhouse<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_i_state-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс IState<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Состояния устроств которые регулируют климат в теплицы: обогреватель, кондиционеры, кран полива и т.д.. Часть паттерна "Состояние".  
+ <a href="class_i_state.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_device_control_8h_source.html">DeviceControl.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:IState:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_state__inherit__graph.png" border="0" usemap="#a_i_state_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_i_state_inherit__map" id="a_i_state_inherit__map">
+<area shape="rect" title="Состояния устроств которые регулируют климат в теплицы: обогреватель, кондиционеры,..." alt="" coords="85,5,145,112"/>
+<area shape="rect" href="class_o_f_f_state.html" title="Состояние OFF контроллера. Часть паттерна &quot;Состояние&quot;." alt="" coords="5,160,104,281"/>
+<area shape="rect" href="class_o_n_state.html" title="Состояние ON контроллера. Часть паттерна &quot;Состояние&quot;." alt="" coords="129,160,221,281"/>
+</map>
+</div>
+<div class="dynheader">
+Граф связей класса IState:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_state__coll__graph.png" border="0" usemap="#a_i_state_coll__map" alt="Collaboration graph"/></div>
+<map name="a_i_state_coll__map" id="a_i_state_coll__map">
+<area shape="rect" title="Состояния устроств которые регулируют климат в теплицы: обогреватель, кондиционеры,..." alt="" coords="5,5,65,112"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a486150503ce647db3c9ac1c3edc467ef"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_state.html#a486150503ce647db3c9ac1c3edc467ef">on</a> ()=0</td></tr>
+<tr class="memdesc:a486150503ce647db3c9ac1c3edc467ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод перевода состояния в <a class="el" href="class_o_n_state.html" title="Состояние ON контроллера. Часть паттерна &quot;Состояние&quot;.">ONState</a>.  <a href="class_i_state.html#a486150503ce647db3c9ac1c3edc467ef">Подробнее...</a><br /></td></tr>
+<tr class="separator:a486150503ce647db3c9ac1c3edc467ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaec9c85b8b7dce7f99ae978d5d65c2b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_state.html#afaec9c85b8b7dce7f99ae978d5d65c2b">off</a> ()=0</td></tr>
+<tr class="memdesc:afaec9c85b8b7dce7f99ae978d5d65c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод перевода состояния в <a class="el" href="class_o_f_f_state.html" title="Состояние OFF контроллера. Часть паттерна &quot;Состояние&quot;.">OFFState</a>.  <a href="class_i_state.html#afaec9c85b8b7dce7f99ae978d5d65c2b">Подробнее...</a><br /></td></tr>
+<tr class="separator:afaec9c85b8b7dce7f99ae978d5d65c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5eab5c65bec31774cdc5fc66be26f2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_type_status_8h.html#a58ec645a8af2e639f20c750ca31a504e">TypeStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_state.html#a2a5eab5c65bec31774cdc5fc66be26f2">get</a> ()=0</td></tr>
+<tr class="memdesc:a2a5eab5c65bec31774cdc5fc66be26f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод получения текущего состояния контроллера.  <a href="class_i_state.html#a2a5eab5c65bec31774cdc5fc66be26f2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2a5eab5c65bec31774cdc5fc66be26f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Состояния устроств которые регулируют климат в теплицы: обогреватель, кондиционеры, кран полива и т.д.. Часть паттерна "Состояние". </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a2a5eab5c65bec31774cdc5fc66be26f2" name="a2a5eab5c65bec31774cdc5fc66be26f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5eab5c65bec31774cdc5fc66be26f2">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_type_status_8h.html#a58ec645a8af2e639f20c750ca31a504e">TypeStatus</a> IState::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод получения текущего состояния контроллера. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>TypeStatus состояния.</dd></dl>
+
+<p>Замещается в <a class="el" href="class_o_n_state.html#a59cbd7109917357d1918f8206b52ef24">ONState</a> и <a class="el" href="class_o_f_f_state.html#afe62a3231c8168992d4b06fe2f622fe1">OFFState</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_state_a2a5eab5c65bec31774cdc5fc66be26f2_icgraph.png" border="0" usemap="#aclass_i_state_a2a5eab5c65bec31774cdc5fc66be26f2_icgraph" alt=""/></div>
+<map name="aclass_i_state_a2a5eab5c65bec31774cdc5fc66be26f2_icgraph" id="aclass_i_state_a2a5eab5c65bec31774cdc5fc66be26f2_icgraph">
+<area shape="rect" title="Метод получения текущего состояния контроллера." alt="" coords="219,5,301,32"/>
+<area shape="rect" href="class_device_control.html#a9edc4a3840afc7dcef053c1dbcedbd4e" title="Получение статуса контроллера." alt="" coords="5,5,171,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afaec9c85b8b7dce7f99ae978d5d65c2b" name="afaec9c85b8b7dce7f99ae978d5d65c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaec9c85b8b7dce7f99ae978d5d65c2b">&#9670;&nbsp;</a></span>off()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IState::off </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод перевода состояния в <a class="el" href="class_o_f_f_state.html" title="Состояние OFF контроллера. Часть паттерна &quot;Состояние&quot;.">OFFState</a>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>True - можно изменить состояние. False - нельзя изменить состояние.</dd></dl>
+
+<p>Замещается в <a class="el" href="class_o_n_state.html#a5fc1d6201f869f0e2b36c82a19749519">ONState</a> и <a class="el" href="class_o_f_f_state.html#ad9509c6f18daf0e07538f9936c464bdd">OFFState</a>.</p>
+
+</div>
+</div>
+<a id="a486150503ce647db3c9ac1c3edc467ef" name="a486150503ce647db3c9ac1c3edc467ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486150503ce647db3c9ac1c3edc467ef">&#9670;&nbsp;</a></span>on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IState::on </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод перевода состояния в <a class="el" href="class_o_n_state.html" title="Состояние ON контроллера. Часть паттерна &quot;Состояние&quot;.">ONState</a>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>True - можно изменить состояние. False - нельзя изменить состояние.</dd></dl>
+
+<p>Замещается в <a class="el" href="class_o_n_state.html#adaad3f8f35ed8ca991a1f06df3a6fe76">ONState</a> и <a class="el" href="class_o_f_f_state.html#a243db28036ad9751a1f66b66437ea5a8">OFFState</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="_device_control_8h_source.html">DeviceControl.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

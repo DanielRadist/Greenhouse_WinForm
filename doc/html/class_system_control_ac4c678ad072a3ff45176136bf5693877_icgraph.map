@@ -1,0 +1,4 @@
+<map id="SystemControl::solution" name="SystemControl::solution">
+<area shape="rect" id="node1" title="Выполнить решение по регулированию климата на основе стратегии." alt="" coords="251,5,412,32"/>
+<area shape="rect" id="node2" href="$class_main_system.html#a7d0a9f8665ae2c6a6c6970ac8a6da813" title="Воспользоваться стратегией." alt="" coords="5,5,203,32"/>
+</map>

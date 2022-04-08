@@ -1,0 +1,8 @@
+<map id="Sensor" name="Sensor">
+<area shape="rect" id="node1" title="Абстрактный класс &quot;Сенсор&quot;" alt="" coords="309,5,397,127"/>
+<area shape="rect" id="node2" href="$class_sensor_c_o2.html" title="Датчик уровня СО2 в воздухе." alt="" coords="5,175,115,252"/>
+<area shape="rect" id="node3" href="$class_sensor_humidity.html" title="Датчик влажности воздуха." alt="" coords="139,175,274,252"/>
+<area shape="rect" id="node4" href="$class_sensor_light.html" title="Датчик освещенности." alt="" coords="298,175,409,252"/>
+<area shape="rect" id="node5" href="$class_sensor_soil_humidity.html" title="Датчик влажности почвы." alt="" coords="433,175,589,252"/>
+<area shape="rect" id="node6" href="$class_sensor_temperature.html" title="Термометр." alt="" coords="613,175,768,252"/>
+</map>

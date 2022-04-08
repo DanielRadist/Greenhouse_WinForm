@@ -1,0 +1,4 @@
+<map id="MainSystem::getListSensorGH" name="MainSystem::getListSensorGH">
+<area shape="rect" id="node1" title="Получение списка сенсоров в теплице." alt="" coords="5,5,208,32"/>
+<area shape="rect" id="node2" href="$class_system_sensor.html#a7ec86e3e3daacd352b819894862fc269" title="Получение списка сенсоров добавленных в данный объект SystemSensor." alt="" coords="256,5,439,32"/>
+</map>

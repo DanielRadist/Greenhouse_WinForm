@@ -1,0 +1,38 @@
+\hypertarget{_type_control_8h_source}{}\doxysection{Type\+Control.\+h}
+\mbox{\hyperlink{_type_control_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{12 \textcolor{keyword}{enum class} \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4a}{TypeControl}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aad690e15341e1a5100e4a9e1fdc0e9575}{Heater}},                   }
+\DoxyCodeLine{15     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aa19dfae8b059ee13da8388413830c5bde}{Cooler}},                   }
+\DoxyCodeLine{16     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aa9914a0ce04a7b7b6a8e39bec55064b82}{Light}},                 }
+\DoxyCodeLine{17     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aaddab800b54d009aa0408ebb9a4ee418d}{Humidity}},               }
+\DoxyCodeLine{18     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aae693e142b94290f51758932db1a5aa54}{SoilHumidity}},           }
+\DoxyCodeLine{19     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aa05f338756c3795e0fe583df923cd6a65}{CO2}},                 }
+\DoxyCodeLine{20     \mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aac89686a387d2b12b3c729ce35a0bcb5b}{Window}},                   }
+\DoxyCodeLine{21     System}
+\DoxyCodeLine{22 \};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{29 \textcolor{keyword}{inline} std::string \mbox{\hyperlink{_type_control_8h_ad4caccfcb24db661f001ca6f9cb08f9e}{TypeControlToStr}}(\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4a}{TypeControl}} type)}
+\DoxyCodeLine{30 \{}
+\DoxyCodeLine{31     std::map<TypeControl, std::string> nameSensor}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         \{\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aad690e15341e1a5100e4a9e1fdc0e9575}{TypeControl::Heater}}, \textcolor{stringliteral}{"{}Heater"{}}\},}
+\DoxyCodeLine{34         \{\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aa9914a0ce04a7b7b6a8e39bec55064b82}{TypeControl::Light}}, \textcolor{stringliteral}{"{}Light"{}}\},}
+\DoxyCodeLine{35         \{\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aaddab800b54d009aa0408ebb9a4ee418d}{TypeControl::Humidity}}, \textcolor{stringliteral}{"{}Humidity"{}}\},}
+\DoxyCodeLine{36         \{\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aae693e142b94290f51758932db1a5aa54}{TypeControl::SoilHumidity}}, \textcolor{stringliteral}{"{}Valve\_water"{}}\},}
+\DoxyCodeLine{37         \{\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aa05f338756c3795e0fe583df923cd6a65}{TypeControl::CO2}}, \textcolor{stringliteral}{"{}Valve\_CO2"{}}\},}
+\DoxyCodeLine{38         \{\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aa19dfae8b059ee13da8388413830c5bde}{TypeControl::Cooler}}, \textcolor{stringliteral}{"{}Cooler"{}}\},}
+\DoxyCodeLine{39         \{\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4aac89686a387d2b12b3c729ce35a0bcb5b}{TypeControl::Window}}, \textcolor{stringliteral}{"{}Window"{}}\},}
+\DoxyCodeLine{40         \{TypeControl::System, \textcolor{stringliteral}{"{}System"{}}\}}
+\DoxyCodeLine{41     \};}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} nameSensor.at(type);}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}

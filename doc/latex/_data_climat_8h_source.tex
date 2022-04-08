@@ -1,0 +1,99 @@
+\hypertarget{_data_climat_8h_source}{}\doxysection{Data\+Climat.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}TypeSensor.h"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_data_climat}{DataClimat}};}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_prototype}{Prototype}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_data_climat}{DataClimat}} clone() = 0;}
+\DoxyCodeLine{10 \};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_data_climat}{DataClimat}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_prototype}{Prototype}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \mbox{\hyperlink{class_data_climat}{DataClimat}} clone()}
+\DoxyCodeLine{17     \{}
+\DoxyCodeLine{18         \textcolor{keywordflow}{return} (\textcolor{keyword}{new} \mbox{\hyperlink{class_data_climat}{DataClimat}}(\textcolor{keyword}{this}));}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \mbox{\hyperlink{class_data_climat}{DataClimat}}(\mbox{\hyperlink{class_data_climat}{DataClimat}}* data)}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23         this-\/>temperature = data-\/>temperature;}
+\DoxyCodeLine{24         this-\/>co2 = data-\/>co2;}
+\DoxyCodeLine{25         this-\/>light = data-\/>light;}
+\DoxyCodeLine{26         this-\/>humidity = data-\/>humidity;}
+\DoxyCodeLine{27         this-\/>soilHumidity = data-\/>soilHumidity;}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_data_climat}{DataClimat}}()}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         this-\/>temperature = INT32\_MIN;}
+\DoxyCodeLine{33         this-\/>co2 = INT32\_MIN;}
+\DoxyCodeLine{34         this-\/>light = INT32\_MIN;}
+\DoxyCodeLine{35         this-\/>humidity = INT32\_MIN;}
+\DoxyCodeLine{36         this-\/>soilHumidity = INT32\_MIN;}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{float} getData(TypeSensor type)}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{switch} (type)}
+\DoxyCodeLine{42         \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{case} TypeSensor::Temperature:}
+\DoxyCodeLine{44             \textcolor{keywordflow}{return} temperature;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         \textcolor{keywordflow}{case} TypeSensor::Light:}
+\DoxyCodeLine{47             \textcolor{keywordflow}{return} light;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{keywordflow}{case} TypeSensor::Humidity:}
+\DoxyCodeLine{50             \textcolor{keywordflow}{return} humidity;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52         \textcolor{keywordflow}{case} TypeSensor::CO2:}
+\DoxyCodeLine{53             \textcolor{keywordflow}{return} co2;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{keywordflow}{case} TypeSensor::SoilHumidity:}
+\DoxyCodeLine{56             \textcolor{keywordflow}{return} soilHumidity;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{59             \textcolor{keywordflow}{return} INT32\_MIN + 1;}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} setData(TypeSensor type, \textcolor{keywordtype}{float} value)}
+\DoxyCodeLine{64     \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{switch} (type)}
+\DoxyCodeLine{66         \{}
+\DoxyCodeLine{67         \textcolor{keywordflow}{case} TypeSensor::Temperature:}
+\DoxyCodeLine{68             temperature = value;}
+\DoxyCodeLine{69             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{70         \textcolor{keywordflow}{case} TypeSensor::Light:}
+\DoxyCodeLine{71             light = value;}
+\DoxyCodeLine{72             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{73         \textcolor{keywordflow}{case} TypeSensor::Humidity:}
+\DoxyCodeLine{74             humidity = value;}
+\DoxyCodeLine{75             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{76         \textcolor{keywordflow}{case} TypeSensor::CO2:}
+\DoxyCodeLine{77             co2 = value;}
+\DoxyCodeLine{78             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{79         \textcolor{keywordflow}{case} TypeSensor::SoilHumidity:}
+\DoxyCodeLine{80             soilHumidity = value;}
+\DoxyCodeLine{81             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{82         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{83             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{84         \}}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{keyword}{private}:}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{keywordtype}{float} temperature;}
+\DoxyCodeLine{90     \textcolor{keywordtype}{float} light;}
+\DoxyCodeLine{91     \textcolor{keywordtype}{float} co2;}
+\DoxyCodeLine{92     \textcolor{keywordtype}{float} humidity;}
+\DoxyCodeLine{93     \textcolor{keywordtype}{float} soilHumidity;}
+\DoxyCodeLine{94 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,3 @@
+<map id="SystemSensor" name="SystemSensor">
+<area shape="rect" id="node1" title="Система сенсоров. Связующая часть между MainSystem и дочерними классами от Sensor." alt="" coords="5,5,133,141"/>
+</map>

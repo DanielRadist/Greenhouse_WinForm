@@ -1,0 +1,4 @@
+<map id="SensorHumidity" name="SensorHumidity">
+<area shape="rect" id="node1" title="Датчик влажности воздуха." alt="" coords="5,175,140,252"/>
+<area shape="rect" id="node2" href="$class_sensor.html" title="Абстрактный класс &quot;Сенсор&quot;" alt="" coords="29,5,117,127"/>
+</map>

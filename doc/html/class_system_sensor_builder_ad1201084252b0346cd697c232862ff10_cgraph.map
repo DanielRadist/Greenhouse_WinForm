@@ -1,0 +1,4 @@
+<map id="SystemSensorBuilder::makeSoilHumidity" name="SystemSensorBuilder::makeSoilHumidity">
+<area shape="rect" id="node1" title="Создание сенсора влажности почвы" alt="" coords="5,5,153,47"/>
+<area shape="rect" id="node2" href="$class_system_sensor.html#a1da6ec6e9788b0f5ce2a917b076cfbce" title="Добавление сенсора в систему." alt="" coords="201,13,339,39"/>
+</map>

@@ -1,0 +1,80 @@
+\hypertarget{class_system_director}{}\doxysection{Класс System\+Director}
+\label{class_system_director}\index{SystemDirector@{SystemDirector}}
+
+
+Директор классов строителей унаследованных от интерфеса \mbox{\hyperlink{class_i_system_builder}{ISystem\+Builder}}.  
+
+
+
+
+{\ttfamily \#include $<$System\+Builder.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_system_director_a84e7b444ece8917a1b338cdbb45c4167}{make\+System\+Sensor}} (\mbox{\hyperlink{class_i_system_builder}{ISystem\+Builder}} $\ast$builder)
+\begin{DoxyCompactList}\small\item\em Метод, в реализации которого заложен приниц создания объекта \mbox{\hyperlink{class_system_sensor}{System\+Sensor}} для теплицы. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_director_ac118ae301c556ef4d72d3da457b457a8}{make\+System\+Control}} (\mbox{\hyperlink{class_i_system_builder}{ISystem\+Builder}} $\ast$builder)
+\begin{DoxyCompactList}\small\item\em Метод, в реализации которого заложен приниц создания объекта \mbox{\hyperlink{class_system_control}{System\+Control}} для теплицы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_system_director}{System\+Director}} $\ast$ \mbox{\hyperlink{class_system_director_a98295882d87874f008047fb884a42421}{Instance}} ()
+\begin{DoxyCompactList}\small\item\em Статический метод для получения экземпляра класса. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Директор классов строителей унаследованных от интерфеса \mbox{\hyperlink{class_i_system_builder}{ISystem\+Builder}}. 
+
+Данный класс использует методы дочерних классов от интерфеса \mbox{\hyperlink{class_i_system_builder}{ISystem\+Builder}} для создания систем климата теплицы. Является классом одиночкой. Для получения объекта используйте статический метод \mbox{\hyperlink{class_system_director_a98295882d87874f008047fb884a42421}{Instance()}}. Является частью паттерна \char`\"{}Строитель\char`\"{}. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_system_director_a98295882d87874f008047fb884a42421}\label{class_system_director_a98295882d87874f008047fb884a42421}} 
+\index{SystemDirector@{SystemDirector}!Instance@{Instance}}
+\index{Instance@{Instance}!SystemDirector@{SystemDirector}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_director}{System\+Director}} $\ast$ System\+Director\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Статический метод для получения экземпляра класса. 
+
+\begin{DoxyReturn}{Возвращает}
+Возвращает указатель на объект \mbox{\hyperlink{class_system_director}{System\+Director}}.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_system_director_ac118ae301c556ef4d72d3da457b457a8}\label{class_system_director_ac118ae301c556ef4d72d3da457b457a8}} 
+\index{SystemDirector@{SystemDirector}!makeSystemControl@{makeSystemControl}}
+\index{makeSystemControl@{makeSystemControl}!SystemDirector@{SystemDirector}}
+\doxysubsubsection{\texorpdfstring{makeSystemControl()}{makeSystemControl()}}
+{\footnotesize\ttfamily void System\+Director\+::make\+System\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_system_builder}{ISystem\+Builder}} $\ast$}]{builder }\end{DoxyParamCaption})}
+
+
+
+Метод, в реализации которого заложен приниц создания объекта \mbox{\hyperlink{class_system_control}{System\+Control}} для теплицы. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em builder} & Указатель на объект \mbox{\hyperlink{class_system_control}{System\+Control}} без контроллеров\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_system_director_a84e7b444ece8917a1b338cdbb45c4167}\label{class_system_director_a84e7b444ece8917a1b338cdbb45c4167}} 
+\index{SystemDirector@{SystemDirector}!makeSystemSensor@{makeSystemSensor}}
+\index{makeSystemSensor@{makeSystemSensor}!SystemDirector@{SystemDirector}}
+\doxysubsubsection{\texorpdfstring{makeSystemSensor()}{makeSystemSensor()}}
+{\footnotesize\ttfamily void System\+Director\+::make\+System\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_system_builder}{ISystem\+Builder}} $\ast$}]{builder }\end{DoxyParamCaption})}
+
+
+
+Метод, в реализации которого заложен приниц создания объекта \mbox{\hyperlink{class_system_sensor}{System\+Sensor}} для теплицы. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em builder} & Указатель на объект \mbox{\hyperlink{class_system_sensor}{System\+Sensor}} без сенсоров\\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+System\+Builder.\+h\item 
+System\+Builder.\+cpp\end{DoxyCompactItemize}

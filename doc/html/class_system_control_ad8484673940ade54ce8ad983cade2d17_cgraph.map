@@ -1,0 +1,4 @@
+<map id="SystemControl::setWindowSetting" name="SystemControl::setWindowSetting">
+<area shape="rect" id="node1" title="Установка положений окна, когда оно считается открытым и закрытым." alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node2" href="$class_device_control.html#a69843a070e6f4db64c0406f65ab81b27" title="Установка положений окна, когда оно считается открытым и закрытым." alt="" coords="233,5,407,47"/>
+</map>

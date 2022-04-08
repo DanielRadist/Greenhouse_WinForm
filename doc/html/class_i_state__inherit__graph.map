@@ -1,0 +1,5 @@
+<map id="IState" name="IState">
+<area shape="rect" id="node1" title="Состояния устроств которые регулируют климат в теплицы: обогреватель, кондиционеры,..." alt="" coords="85,5,145,112"/>
+<area shape="rect" id="node2" href="$class_o_f_f_state.html" title="Состояние OFF контроллера. Часть паттерна &quot;Состояние&quot;." alt="" coords="5,160,104,281"/>
+<area shape="rect" id="node3" href="$class_o_n_state.html" title="Состояние ON контроллера. Часть паттерна &quot;Состояние&quot;." alt="" coords="129,160,221,281"/>
+</map>

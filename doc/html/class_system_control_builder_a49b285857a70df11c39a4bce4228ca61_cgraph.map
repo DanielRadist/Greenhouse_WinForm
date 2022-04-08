@@ -1,0 +1,5 @@
+<map id="SystemControlBuilder::makeSoilHumidity" name="SystemControlBuilder::makeSoilHumidity">
+<area shape="rect" id="node1" title="Создание контроллера управления краном полива" alt="" coords="5,23,153,65"/>
+<area shape="rect" id="node2" href="$class_system_control.html#a43fc0891c5bbb075b0992db9f3586ca1" title="Добавление контролера в систему." alt="" coords="209,5,346,32"/>
+<area shape="rect" id="node3" href="$class_system_control.html#a6e23cbde94a4b149ce9463ec7a827833" title="Создание контроллера" alt="" coords="201,56,353,83"/>
+</map>

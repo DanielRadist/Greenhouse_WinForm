@@ -4,6 +4,15 @@
 
 using namespace std;
 
+
+/// <summary>
+/// Интерфес контроллеров.
+/// </summary>
+/*!
+    \brief 
+    Данный класс описывает два виртуальных метода для дочерних контроллеров, реализация которых выполнена в дочерних классах, 
+    а также выступает как абстрактный класс: имеет поле типа TypeControl, которое можно получить с помошью метода getType().
+*/
 class IControl
 {
 protected:
@@ -13,14 +22,14 @@ public:
 
     IControl(TypeControl type);
 
-    virtual void on() = 0;      // включение
-    virtual void off() = 0;     // выключение
+    virtual void on() = 0;      ///< Включение. \brief Включение физического устройства управляемого контроллером.
+    virtual void off() = 0;     ///< Выключение. \brief Выключение физического устройства управляемого контроллером.
 
     TypeControl getType();
 };
 
 /// <summary>
-/// Обогреватель
+/// Обогреватель.
 /// </summary>
 class ControlHeater : public IControl
 {
@@ -32,7 +41,7 @@ public:
 };
 
 /// <summary>
-/// Кондиционер
+/// Кондиционер.
 /// </summary>
 class ControlCooler : public IControl
 {
@@ -44,7 +53,7 @@ public:
 };
 
 /// <summary>
-/// Искусственный свет
+/// Искусственный свет.
 /// </summary>
 class ControlLight : public IControl
 {
@@ -56,7 +65,7 @@ public:
 };
 
 /// <summary>
-/// Окно теплицы
+/// Окно теплицы.
 /// </summary>
 class ControlWindow
 {
@@ -67,8 +76,12 @@ public:
 };
 
 /// <summary>
-/// Адептр окна теплицы
+/// Адептр окна теплицы.
 /// </summary>
+/*!
+    \brief
+    Данный класс наследуется от интерфеса IContorl. Необходим для совместимости класса ControlWindow в проекте.
+*/
 class AdapterControlWindow : public IControl
 {
 protected:
@@ -88,7 +101,7 @@ public:
 };
 
 /// <summary>
-/// Увлажнитель
+/// Увлажнитель.
 /// </summary>
 class ControlHumidity : public IControl
 {
@@ -100,7 +113,7 @@ public:
 };
 
 /// <summary>
-/// Кран полива
+/// Кран полива.
 /// </summary>
 class ControlSoilHumidity : public IControl
 {
@@ -112,7 +125,7 @@ public:
 };
 
 /// <summary>
-/// Кран подачи СО2
+/// Кран подачи СО2.
 /// </summary>
 class ControlCO2 : public IControl
 {

@@ -1,0 +1,92 @@
+\hypertarget{_system_builder_8h_source}{}\doxysection{System\+Builder.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}SystemSensor.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}SystemControl.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_i_system_builder}{ISystemBuilder}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_system_builder_ac056d24f50d2821eca884ec5fc353963}{makeTemperature}}() = 0;          }
+\DoxyCodeLine{20     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_system_builder_aa099b15d56c21c97248814a97e58fcd1}{makeCooler}}() = 0;                }
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_system_builder_acbe596526671eb6735599b5fc1a99d2e}{makeHeater}}() = 0;                }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_system_builder_ad143fbddd6363987e1f954530b35d296}{makeHumidity}}() = 0;            }
+\DoxyCodeLine{24     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_system_builder_a55792bab07eaca13a5f27bb8e2f8638a}{makeCO2}}() = 0;                  }
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_system_builder_aca2f7b8005f751d24b1fdbff9b2aa39d}{makeSoilHumidity}}() = 0;        }
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_system_builder_aa3122ccee660cfaf1da73347b8d043ad}{makeLight}}() = 0;              }
+\DoxyCodeLine{27     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_system_builder_aaedf37329a6d2490cd7f2d2abad3a50c}{makeWindow}}() = 0;                }
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{38 \textcolor{keyword}{class }\mbox{\hyperlink{class_system_sensor_builder}{SystemSensorBuilder}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_system_builder}{ISystemBuilder}}}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40 \textcolor{keyword}{public}:}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_system_sensor_builder}{SystemSensorBuilder}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{comment}{// realizable}}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_sensor_builder_a426e1748e31b56c0abf01a3d05b6c47e}{makeTemperature}}();              }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_sensor_builder_aea10c477bb582d0cefc2e18025e80f0e}{makeHumidity}}();                }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_sensor_builder_ab0dc068750d942b78fb967ccf5c339a9}{makeCO2}}();                      }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_sensor_builder_ad1201084252b0346cd697c232862ff10}{makeSoilHumidity}}();            }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_sensor_builder_ac0420b8b1370432c3d6102e6ef4875e2}{makeLight}}();                  }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{// Not realizable:}}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_sensor_builder_a5f3fd9619dc75e545f6b5b9f4cc25e42}{makeWindow}}() \{\}              }
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_sensor_builder_aaaa6e4666f0a4e8e4418fe8869c94e67}{makeCooler}}() \{\}              }
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_sensor_builder_aaf78a7863d27a23b24c6a3b6f6d8e554}{makeHeater}}() \{\}              }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59     \mbox{\hyperlink{class_system_sensor}{SystemSensor}}* \mbox{\hyperlink{class_system_sensor_builder_a4de914ae3b9cc7342114f617fbee9bcc}{getResult}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{private}:}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \mbox{\hyperlink{class_system_sensor}{SystemSensor}}* sysSens;              }
+\DoxyCodeLine{64 \};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{75 \textcolor{keyword}{class }\mbox{\hyperlink{class_system_control_builder}{SystemControlBuilder}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_system_builder}{ISystemBuilder}}}
+\DoxyCodeLine{76 \{}
+\DoxyCodeLine{77 \textcolor{keyword}{public}:}
+\DoxyCodeLine{78     \mbox{\hyperlink{class_system_control_builder}{SystemControlBuilder}}();}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \textcolor{comment}{// realizable}}
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_builder_af7dba3ee11faf86fafb190164b41d7b5}{makeWindow}}();                    }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_builder_a82b5ec4a34e72884a1aa46235eaa8ba5}{makeCooler}}();                    }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_builder_a783d9a7f087cd2284fc45ed06c28f0bd}{makeHeater}}();                    }
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_builder_a88d11bb14518540f561d871e45a6f767}{makeCO2}}();                      }
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_builder_a49b285857a70df11c39a4bce4228ca61}{makeSoilHumidity}}();            }
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_builder_a2e0b47c753ff491985c681faf95e1fb4}{makeLight}}();                  }
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_builder_aebdf2f98132756d2b1a40c57480e934e}{makeHumidity}}();                }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{comment}{// Non realizable}}
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_builder_af4cfee1a8eb92bff0a786126bd3f4e4d}{makeTemperature}}() \{\}            }
+\DoxyCodeLine{91     }
+\DoxyCodeLine{96     \mbox{\hyperlink{class_system_control}{SystemControl}}* \mbox{\hyperlink{class_system_control_builder_a8660caa34d663158af82372a574f543f}{getResult}}();}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{keyword}{private}:}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \mbox{\hyperlink{class_system_control}{SystemControl}}* sysCtrl;                }
+\DoxyCodeLine{101 \};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{106 }
+\DoxyCodeLine{112 \textcolor{keyword}{class }\mbox{\hyperlink{class_system_director}{SystemDirector}}}
+\DoxyCodeLine{113 \{}
+\DoxyCodeLine{114 \textcolor{keyword}{public}:}
+\DoxyCodeLine{115     \mbox{\hyperlink{class_system_director}{SystemDirector}}();}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{121     \textcolor{keyword}{static} \mbox{\hyperlink{class_system_director}{SystemDirector}}* \mbox{\hyperlink{class_system_director_a98295882d87874f008047fb884a42421}{Instance}}();}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{127     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_director_a84e7b444ece8917a1b338cdbb45c4167}{makeSystemSensor}}(\mbox{\hyperlink{class_i_system_builder}{ISystemBuilder}}* builder);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{133     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_director_ac118ae301c556ef4d72d3da457b457a8}{makeSystemControl}}(\mbox{\hyperlink{class_i_system_builder}{ISystemBuilder}}* builder);}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{keyword}{private}:}
+\DoxyCodeLine{136     \textcolor{keyword}{static} \mbox{\hyperlink{class_system_director}{SystemDirector}}* \_instance;}
+\DoxyCodeLine{137 \};}
+
+\end{DoxyCode}

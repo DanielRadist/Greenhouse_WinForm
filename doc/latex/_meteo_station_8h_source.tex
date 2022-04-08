@@ -1,0 +1,29 @@
+\hypertarget{_meteo_station_8h_source}{}\doxysection{Meteo\+Station.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Sensor.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_meteo_station}{MeteoStation}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{private}:}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     \mbox{\hyperlink{class_sensor}{Sensor}}* temperature;}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_sensor}{Sensor}}* co2;}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_sensor}{Sensor}}* humidity;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_meteo_station}{MeteoStation}}();}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_meteo_station}{\string~MeteoStation}}();}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \mbox{\hyperlink{class_data_climat}{DataClimat}} getData();}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     std::list<Sensor*> getSensors();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_data_source}{DataSource}};}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+
+\end{DoxyCode}

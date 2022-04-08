@@ -1,0 +1,5 @@
+<map id="IStrategy" name="IStrategy">
+<area shape="rect" id="node1" title="Интерфес стратегии (режим работы)." alt="" coords="93,5,179,83"/>
+<area shape="rect" id="node2" href="$class_eco_strategy.html" title="Экономичный режим работы." alt="" coords="5,131,120,223"/>
+<area shape="rect" id="node3" href="$class_normal_strategy.html" title="Обычный режим работы." alt="" coords="145,131,277,223"/>
+</map>

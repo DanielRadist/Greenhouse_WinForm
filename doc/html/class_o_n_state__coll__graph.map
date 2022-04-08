@@ -1,0 +1,4 @@
+<map id="ONState" name="ONState">
+<area shape="rect" id="node1" title="Состояние ON контроллера. Часть паттерна &quot;Состояние&quot;." alt="" coords="5,160,97,281"/>
+<area shape="rect" id="node2" href="$class_i_state.html" title="Состояния устроств которые регулируют климат в теплицы: обогреватель, кондиционеры,..." alt="" coords="21,5,81,112"/>
+</map>

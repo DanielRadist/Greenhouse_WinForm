@@ -1,0 +1,64 @@
+\hypertarget{_main_system_8h_source}{}\doxysection{Main\+System.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}SystemSensor.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}SystemControl.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}SystemBuilder.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}MeteoStation.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Culture.h"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_i_strategy}{IStrategy}};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_system}{MainSystem}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{private}:}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \mbox{\hyperlink{class_i_strategy}{IStrategy}}* strategy;       \textcolor{comment}{// Стретегия работы (режим работы)}}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_system_sensor}{SystemSensor}}* sysSens;      \textcolor{comment}{// Система сенсоров}}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_system_control}{SystemControl}}* sysCtrl;        \textcolor{comment}{// Система контроля}}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_meteo_station}{MeteoStation}}* meteoS;       \textcolor{comment}{// Метеостанция}}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_culture}{Culture}}* culrure;            \textcolor{comment}{// Выращиваемая культура}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \mbox{\hyperlink{class_main_system}{MainSystem}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_system_a57bfedf1fa3e26430fdffc0163775381}{setStrategy}}(\mbox{\hyperlink{class_i_strategy}{IStrategy}}* strategy);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_system_a3a3816817b045dd1bc297be73353fed6}{setCulture}}(\mbox{\hyperlink{class_culture}{Culture}}* culture);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_system_a7d0a9f8665ae2c6a6c6970ac8a6da813}{solutionStrategy}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     list<Sensor*> getListSensorGH();}
+\DoxyCodeLine{48     list<Sensor*> getListSensorMS();}
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{54 \textcolor{keyword}{class }\mbox{\hyperlink{class_i_strategy}{IStrategy}}}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56 \textcolor{keyword}{public}:}
+\DoxyCodeLine{57     \textcolor{keyword}{virtual} list<pair<TypeControl, TypeStatus>> solution(\mbox{\hyperlink{class_data_climat}{DataClimat}} climat, \mbox{\hyperlink{class_data_climat}{DataClimat}} greenhouse, \mbox{\hyperlink{class_culture}{Culture}}* culture) = 0;}
+\DoxyCodeLine{58 \};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63 \textcolor{keyword}{class }\mbox{\hyperlink{class_normal_strategy}{NormalStrategy}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_strategy}{IStrategy}}}
+\DoxyCodeLine{64 \{}
+\DoxyCodeLine{65 \textcolor{keyword}{public}:}
+\DoxyCodeLine{66     \mbox{\hyperlink{class_normal_strategy}{NormalStrategy}}();}
+\DoxyCodeLine{67     list<pair<TypeControl, TypeStatus>> solution(\mbox{\hyperlink{class_data_climat}{DataClimat}} climat, \mbox{\hyperlink{class_data_climat}{DataClimat}} greenhouse, \mbox{\hyperlink{class_culture}{Culture}}* culture);}
+\DoxyCodeLine{68 \};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{73 \textcolor{keyword}{class }\mbox{\hyperlink{class_eco_strategy}{EcoStrategy}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_strategy}{IStrategy}}}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75 \textcolor{keyword}{public}:}
+\DoxyCodeLine{76     \mbox{\hyperlink{class_eco_strategy}{EcoStrategy}}();}
+\DoxyCodeLine{77     list<pair<TypeControl, TypeStatus>> solution(\mbox{\hyperlink{class_data_climat}{DataClimat}} climat, \mbox{\hyperlink{class_data_climat}{DataClimat}} greenhouse, \mbox{\hyperlink{class_culture}{Culture}}* culture);}
+\DoxyCodeLine{78 \};}
+\DoxyCodeLine{79 }
+
+\end{DoxyCode}

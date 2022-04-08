@@ -1,0 +1,4 @@
+<map id="NormalStrategy" name="NormalStrategy">
+<area shape="rect" id="node1" title="Обычный режим работы." alt="" coords="5,131,137,223"/>
+<area shape="rect" id="node2" href="$class_i_strategy.html" title="Интерфес стратегии (режим работы)." alt="" coords="28,5,115,83"/>
+</map>

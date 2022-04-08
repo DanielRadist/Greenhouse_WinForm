@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Greenhouse: Исходный файл SystemBuilder.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Greenhouse<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SystemBuilder.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;SystemSensor.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;SystemControl.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_i_system_builder.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_system_builder.html">ISystemBuilder</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_i_system_builder.html#ac056d24f50d2821eca884ec5fc353963">   19</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_system_builder.html#ac056d24f50d2821eca884ec5fc353963">makeTemperature</a>() = 0;         </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_i_system_builder.html#aa099b15d56c21c97248814a97e58fcd1">   20</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_system_builder.html#aa099b15d56c21c97248814a97e58fcd1">makeCooler</a>() = 0;              </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_i_system_builder.html#acbe596526671eb6735599b5fc1a99d2e">   21</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_system_builder.html#acbe596526671eb6735599b5fc1a99d2e">makeHeater</a>() = 0;              </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_i_system_builder.html#ad143fbddd6363987e1f954530b35d296">   23</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_system_builder.html#ad143fbddd6363987e1f954530b35d296">makeHumidity</a>() = 0;            </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_i_system_builder.html#a55792bab07eaca13a5f27bb8e2f8638a">   24</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_system_builder.html#a55792bab07eaca13a5f27bb8e2f8638a">makeCO2</a>() = 0;                 </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_i_system_builder.html#aca2f7b8005f751d24b1fdbff9b2aa39d">   25</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_system_builder.html#aca2f7b8005f751d24b1fdbff9b2aa39d">makeSoilHumidity</a>() = 0;        </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_i_system_builder.html#aa3122ccee660cfaf1da73347b8d043ad">   26</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_system_builder.html#aa3122ccee660cfaf1da73347b8d043ad">makeLight</a>() = 0;               </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_i_system_builder.html#aaedf37329a6d2490cd7f2d2abad3a50c">   27</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_system_builder.html#aaedf37329a6d2490cd7f2d2abad3a50c">makeWindow</a>() = 0;              </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_system_sensor_builder.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="class_system_sensor_builder.html">SystemSensorBuilder</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_system_builder.html">ISystemBuilder</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="class_system_sensor_builder.html">SystemSensorBuilder</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// realizable</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_sensor_builder.html#a426e1748e31b56c0abf01a3d05b6c47e">makeTemperature</a>();             </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_sensor_builder.html#aea10c477bb582d0cefc2e18025e80f0e">makeHumidity</a>();                </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_sensor_builder.html#ab0dc068750d942b78fb967ccf5c339a9">makeCO2</a>();                     </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_sensor_builder.html#ad1201084252b0346cd697c232862ff10">makeSoilHumidity</a>();            </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_sensor_builder.html#ac0420b8b1370432c3d6102e6ef4875e2">makeLight</a>();                   </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// Not realizable:</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_system_sensor_builder.html#a5f3fd9619dc75e545f6b5b9f4cc25e42">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_sensor_builder.html#a5f3fd9619dc75e545f6b5b9f4cc25e42">makeWindow</a>() {}                </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_system_sensor_builder.html#aaaa6e4666f0a4e8e4418fe8869c94e67">   52</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_sensor_builder.html#aaaa6e4666f0a4e8e4418fe8869c94e67">makeCooler</a>() {}                </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_system_sensor_builder.html#aaf78a7863d27a23b24c6a3b6f6d8e554">   53</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_sensor_builder.html#aaf78a7863d27a23b24c6a3b6f6d8e554">makeHeater</a>() {}                </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_class" href="class_system_sensor.html">SystemSensor</a>* <a class="code hl_function" href="class_system_sensor_builder.html#a4de914ae3b9cc7342114f617fbee9bcc">getResult</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_class" href="class_system_sensor.html">SystemSensor</a>* sysSens;              </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_system_control_builder.html">   75</a></span><span class="keyword">class </span><a class="code hl_class" href="class_system_control_builder.html">SystemControlBuilder</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_system_builder.html">ISystemBuilder</a></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_class" href="class_system_control_builder.html">SystemControlBuilder</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// realizable</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_control_builder.html#af7dba3ee11faf86fafb190164b41d7b5">makeWindow</a>();                  </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_control_builder.html#a82b5ec4a34e72884a1aa46235eaa8ba5">makeCooler</a>();                  </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_control_builder.html#a783d9a7f087cd2284fc45ed06c28f0bd">makeHeater</a>();                  </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_control_builder.html#a88d11bb14518540f561d871e45a6f767">makeCO2</a>();                     </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_control_builder.html#a49b285857a70df11c39a4bce4228ca61">makeSoilHumidity</a>();            </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_control_builder.html#a2e0b47c753ff491985c681faf95e1fb4">makeLight</a>();                   </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_control_builder.html#aebdf2f98132756d2b1a40c57480e934e">makeHumidity</a>();                </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// Non realizable</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_system_control_builder.html#af4cfee1a8eb92bff0a786126bd3f4e4d">   90</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_control_builder.html#af4cfee1a8eb92bff0a786126bd3f4e4d">makeTemperature</a>() {}           </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_class" href="class_system_control.html">SystemControl</a>* <a class="code hl_function" href="class_system_control_builder.html#a8660caa34d663158af82372a574f543f">getResult</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_class" href="class_system_control.html">SystemControl</a>* sysCtrl;             </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>};</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_system_director.html">  112</a></span><span class="keyword">class </span><a class="code hl_class" href="class_system_director.html">SystemDirector</a></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>{</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_class" href="class_system_director.html">SystemDirector</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_system_director.html">SystemDirector</a>* <a class="code hl_function" href="class_system_director.html#a98295882d87874f008047fb884a42421">Instance</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_director.html#a84e7b444ece8917a1b338cdbb45c4167">makeSystemSensor</a>(<a class="code hl_class" href="class_i_system_builder.html">ISystemBuilder</a>* builder);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_system_director.html#ac118ae301c556ef4d72d3da457b457a8">makeSystemControl</a>(<a class="code hl_class" href="class_i_system_builder.html">ISystemBuilder</a>* builder);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_system_director.html">SystemDirector</a>* _instance;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>};</div>
+<div class="ttc" id="aclass_i_system_builder_html"><div class="ttname"><a href="class_i_system_builder.html">ISystemBuilder</a></div><div class="ttdoc">Интерфес строителя систем: SystemSensor и SystemControl.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.h:16</div></div>
+<div class="ttc" id="aclass_i_system_builder_html_a55792bab07eaca13a5f27bb8e2f8638a"><div class="ttname"><a href="class_i_system_builder.html#a55792bab07eaca13a5f27bb8e2f8638a">ISystemBuilder::makeCO2</a></div><div class="ttdeci">virtual void makeCO2()=0</div><div class="ttdoc">Создание сенсора / контроллера уровня СО2.</div></div>
+<div class="ttc" id="aclass_i_system_builder_html_aa099b15d56c21c97248814a97e58fcd1"><div class="ttname"><a href="class_i_system_builder.html#aa099b15d56c21c97248814a97e58fcd1">ISystemBuilder::makeCooler</a></div><div class="ttdeci">virtual void makeCooler()=0</div><div class="ttdoc">Создание контроллера кондиционера.</div></div>
+<div class="ttc" id="aclass_i_system_builder_html_aa3122ccee660cfaf1da73347b8d043ad"><div class="ttname"><a href="class_i_system_builder.html#aa3122ccee660cfaf1da73347b8d043ad">ISystemBuilder::makeLight</a></div><div class="ttdeci">virtual void makeLight()=0</div><div class="ttdoc">Создание сенсора / контроллера освещенности.</div></div>
+<div class="ttc" id="aclass_i_system_builder_html_aaedf37329a6d2490cd7f2d2abad3a50c"><div class="ttname"><a href="class_i_system_builder.html#aaedf37329a6d2490cd7f2d2abad3a50c">ISystemBuilder::makeWindow</a></div><div class="ttdeci">virtual void makeWindow()=0</div><div class="ttdoc">Создание контроллера управления окном.</div></div>
+<div class="ttc" id="aclass_i_system_builder_html_ac056d24f50d2821eca884ec5fc353963"><div class="ttname"><a href="class_i_system_builder.html#ac056d24f50d2821eca884ec5fc353963">ISystemBuilder::makeTemperature</a></div><div class="ttdeci">virtual void makeTemperature()=0</div><div class="ttdoc">Создание сенсора температуры.</div></div>
+<div class="ttc" id="aclass_i_system_builder_html_aca2f7b8005f751d24b1fdbff9b2aa39d"><div class="ttname"><a href="class_i_system_builder.html#aca2f7b8005f751d24b1fdbff9b2aa39d">ISystemBuilder::makeSoilHumidity</a></div><div class="ttdeci">virtual void makeSoilHumidity()=0</div><div class="ttdoc">Создание сенсора / контроллера влажности почвы.</div></div>
+<div class="ttc" id="aclass_i_system_builder_html_acbe596526671eb6735599b5fc1a99d2e"><div class="ttname"><a href="class_i_system_builder.html#acbe596526671eb6735599b5fc1a99d2e">ISystemBuilder::makeHeater</a></div><div class="ttdeci">virtual void makeHeater()=0</div><div class="ttdoc">Создание контроллера нагревателя.</div></div>
+<div class="ttc" id="aclass_i_system_builder_html_ad143fbddd6363987e1f954530b35d296"><div class="ttname"><a href="class_i_system_builder.html#ad143fbddd6363987e1f954530b35d296">ISystemBuilder::makeHumidity</a></div><div class="ttdeci">virtual void makeHumidity()=0</div><div class="ttdoc">Создание сенсора / контроллера влажности.</div></div>
+<div class="ttc" id="aclass_system_control_builder_html"><div class="ttname"><a href="class_system_control_builder.html">SystemControlBuilder</a></div><div class="ttdoc">Строитель системы контроля климата</div><div class="ttdef"><b>Definition:</b> SystemBuilder.h:76</div></div>
+<div class="ttc" id="aclass_system_control_builder_html_a2e0b47c753ff491985c681faf95e1fb4"><div class="ttname"><a href="class_system_control_builder.html#a2e0b47c753ff491985c681faf95e1fb4">SystemControlBuilder::makeLight</a></div><div class="ttdeci">void makeLight()</div><div class="ttdoc">Создание контроллера управления искусственым освещением</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:74</div></div>
+<div class="ttc" id="aclass_system_control_builder_html_a49b285857a70df11c39a4bce4228ca61"><div class="ttname"><a href="class_system_control_builder.html#a49b285857a70df11c39a4bce4228ca61">SystemControlBuilder::makeSoilHumidity</a></div><div class="ttdeci">void makeSoilHumidity()</div><div class="ttdoc">Создание контроллера управления краном полива</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:69</div></div>
+<div class="ttc" id="aclass_system_control_builder_html_a783d9a7f087cd2284fc45ed06c28f0bd"><div class="ttname"><a href="class_system_control_builder.html#a783d9a7f087cd2284fc45ed06c28f0bd">SystemControlBuilder::makeHeater</a></div><div class="ttdeci">void makeHeater()</div><div class="ttdoc">Создание контроллера управления подогревом</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:59</div></div>
+<div class="ttc" id="aclass_system_control_builder_html_a82b5ec4a34e72884a1aa46235eaa8ba5"><div class="ttname"><a href="class_system_control_builder.html#a82b5ec4a34e72884a1aa46235eaa8ba5">SystemControlBuilder::makeCooler</a></div><div class="ttdeci">void makeCooler()</div><div class="ttdoc">Создание контроллера управления кондиционером</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:54</div></div>
+<div class="ttc" id="aclass_system_control_builder_html_a8660caa34d663158af82372a574f543f"><div class="ttname"><a href="class_system_control_builder.html#a8660caa34d663158af82372a574f543f">SystemControlBuilder::getResult</a></div><div class="ttdeci">SystemControl * getResult()</div><div class="ttdoc">Возвращает указатель на дочерний класс интерфеса SystemControl с созданными контроллерами.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:84</div></div>
+<div class="ttc" id="aclass_system_control_builder_html_a88d11bb14518540f561d871e45a6f767"><div class="ttname"><a href="class_system_control_builder.html#a88d11bb14518540f561d871e45a6f767">SystemControlBuilder::makeCO2</a></div><div class="ttdeci">void makeCO2()</div><div class="ttdoc">Создание контроллера управления краном СО2.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:64</div></div>
+<div class="ttc" id="aclass_system_control_builder_html_aebdf2f98132756d2b1a40c57480e934e"><div class="ttname"><a href="class_system_control_builder.html#aebdf2f98132756d2b1a40c57480e934e">SystemControlBuilder::makeHumidity</a></div><div class="ttdeci">void makeHumidity()</div><div class="ttdoc">Создание контроллера управления влажностью воздуха</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:79</div></div>
+<div class="ttc" id="aclass_system_control_builder_html_af4cfee1a8eb92bff0a786126bd3f4e4d"><div class="ttname"><a href="class_system_control_builder.html#af4cfee1a8eb92bff0a786126bd3f4e4d">SystemControlBuilder::makeTemperature</a></div><div class="ttdeci">void makeTemperature()</div><div class="ttdoc">Нет реализации.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.h:90</div></div>
+<div class="ttc" id="aclass_system_control_builder_html_af7dba3ee11faf86fafb190164b41d7b5"><div class="ttname"><a href="class_system_control_builder.html#af7dba3ee11faf86fafb190164b41d7b5">SystemControlBuilder::makeWindow</a></div><div class="ttdeci">void makeWindow()</div><div class="ttdoc">Создание контроллера привода окна</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:49</div></div>
+<div class="ttc" id="aclass_system_control_html"><div class="ttname"><a href="class_system_control.html">SystemControl</a></div><div class="ttdoc">Система контроллеров. Связующая часть между MainSystem и дочерними классами от IControl.</div><div class="ttdef"><b>Definition:</b> SystemControl.h:15</div></div>
+<div class="ttc" id="aclass_system_director_html"><div class="ttname"><a href="class_system_director.html">SystemDirector</a></div><div class="ttdoc">Директор классов строителей унаследованных от интерфеса ISystemBuilder.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.h:113</div></div>
+<div class="ttc" id="aclass_system_director_html_a84e7b444ece8917a1b338cdbb45c4167"><div class="ttname"><a href="class_system_director.html#a84e7b444ece8917a1b338cdbb45c4167">SystemDirector::makeSystemSensor</a></div><div class="ttdeci">void makeSystemSensor(ISystemBuilder *builder)</div><div class="ttdoc">Метод, в реализации которого заложен приниц создания объекта SystemSensor для теплицы.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:106</div></div>
+<div class="ttc" id="aclass_system_director_html_a98295882d87874f008047fb884a42421"><div class="ttname"><a href="class_system_director.html#a98295882d87874f008047fb884a42421">SystemDirector::Instance</a></div><div class="ttdeci">static SystemDirector * Instance()</div><div class="ttdoc">Статический метод для получения экземпляра класса.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:97</div></div>
+<div class="ttc" id="aclass_system_director_html_ac118ae301c556ef4d72d3da457b457a8"><div class="ttname"><a href="class_system_director.html#ac118ae301c556ef4d72d3da457b457a8">SystemDirector::makeSystemControl</a></div><div class="ttdeci">void makeSystemControl(ISystemBuilder *builder)</div><div class="ttdoc">Метод, в реализации которого заложен приниц создания объекта SystemControl для теплицы.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:117</div></div>
+<div class="ttc" id="aclass_system_sensor_builder_html"><div class="ttname"><a href="class_system_sensor_builder.html">SystemSensorBuilder</a></div><div class="ttdoc">Строитель системы датчиков (сенсоров) климата</div><div class="ttdef"><b>Definition:</b> SystemBuilder.h:39</div></div>
+<div class="ttc" id="aclass_system_sensor_builder_html_a426e1748e31b56c0abf01a3d05b6c47e"><div class="ttname"><a href="class_system_sensor_builder.html#a426e1748e31b56c0abf01a3d05b6c47e">SystemSensorBuilder::makeTemperature</a></div><div class="ttdeci">void makeTemperature()</div><div class="ttdoc">Создание сенсора температуры.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:11</div></div>
+<div class="ttc" id="aclass_system_sensor_builder_html_a4de914ae3b9cc7342114f617fbee9bcc"><div class="ttname"><a href="class_system_sensor_builder.html#a4de914ae3b9cc7342114f617fbee9bcc">SystemSensorBuilder::getResult</a></div><div class="ttdeci">SystemSensor * getResult()</div><div class="ttdoc">Возвращает указатель на дочерний класс интерфеса SystemSensor с созданными сенсорами.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:36</div></div>
+<div class="ttc" id="aclass_system_sensor_builder_html_a5f3fd9619dc75e545f6b5b9f4cc25e42"><div class="ttname"><a href="class_system_sensor_builder.html#a5f3fd9619dc75e545f6b5b9f4cc25e42">SystemSensorBuilder::makeWindow</a></div><div class="ttdeci">void makeWindow()</div><div class="ttdoc">Нет реализации.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.h:51</div></div>
+<div class="ttc" id="aclass_system_sensor_builder_html_aaaa6e4666f0a4e8e4418fe8869c94e67"><div class="ttname"><a href="class_system_sensor_builder.html#aaaa6e4666f0a4e8e4418fe8869c94e67">SystemSensorBuilder::makeCooler</a></div><div class="ttdeci">void makeCooler()</div><div class="ttdoc">Нет реализации.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.h:52</div></div>
+<div class="ttc" id="aclass_system_sensor_builder_html_aaf78a7863d27a23b24c6a3b6f6d8e554"><div class="ttname"><a href="class_system_sensor_builder.html#aaf78a7863d27a23b24c6a3b6f6d8e554">SystemSensorBuilder::makeHeater</a></div><div class="ttdeci">void makeHeater()</div><div class="ttdoc">Нет реализации.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.h:53</div></div>
+<div class="ttc" id="aclass_system_sensor_builder_html_ab0dc068750d942b78fb967ccf5c339a9"><div class="ttname"><a href="class_system_sensor_builder.html#ab0dc068750d942b78fb967ccf5c339a9">SystemSensorBuilder::makeCO2</a></div><div class="ttdeci">void makeCO2()</div><div class="ttdoc">Создание сенсора уровня СО2.</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:21</div></div>
+<div class="ttc" id="aclass_system_sensor_builder_html_ac0420b8b1370432c3d6102e6ef4875e2"><div class="ttname"><a href="class_system_sensor_builder.html#ac0420b8b1370432c3d6102e6ef4875e2">SystemSensorBuilder::makeLight</a></div><div class="ttdeci">void makeLight()</div><div class="ttdoc">Создание сенсора уровня освещенности</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:31</div></div>
+<div class="ttc" id="aclass_system_sensor_builder_html_ad1201084252b0346cd697c232862ff10"><div class="ttname"><a href="class_system_sensor_builder.html#ad1201084252b0346cd697c232862ff10">SystemSensorBuilder::makeSoilHumidity</a></div><div class="ttdeci">void makeSoilHumidity()</div><div class="ttdoc">Создание сенсора влажности почвы</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:26</div></div>
+<div class="ttc" id="aclass_system_sensor_builder_html_aea10c477bb582d0cefc2e18025e80f0e"><div class="ttname"><a href="class_system_sensor_builder.html#aea10c477bb582d0cefc2e18025e80f0e">SystemSensorBuilder::makeHumidity</a></div><div class="ttdeci">void makeHumidity()</div><div class="ttdoc">Создание сенсора влажности воздуха</div><div class="ttdef"><b>Definition:</b> SystemBuilder.cpp:16</div></div>
+<div class="ttc" id="aclass_system_sensor_html"><div class="ttname"><a href="class_system_sensor.html">SystemSensor</a></div><div class="ttdoc">Система сенсоров. Связующая часть между MainSystem и дочерними классами от Sensor.</div><div class="ttdef"><b>Definition:</b> SystemSensor.h:14</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

@@ -1,0 +1,31 @@
+\hypertarget{_culture_8h_source}{}\doxysection{Culture.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{3 \textcolor{comment}{//\#include "{}TypeSensor.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}DataClimat.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_culture}{Culture}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_culture}{Culture}}(std::string name, \mbox{\hyperlink{class_data_climat}{DataClimat}} min, \mbox{\hyperlink{class_data_climat}{DataClimat}} max);}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_culture_ae40172c39c669d17ac2d23749bb684f6}{getMin}}(TypeSensor typeValue);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_culture_a27d01f22ae7ef84768ce66a38d84fc3c}{getMax}}(TypeSensor typeValue);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     std::string getName();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{private}:}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     std::string name;}
+\DoxyCodeLine{30     std::pair<int, int> temperature;}
+\DoxyCodeLine{31     std::pair<int, int> light;}
+\DoxyCodeLine{32     std::pair<int, int> humidity;}
+\DoxyCodeLine{33     std::pair<int, int> co2;}
+\DoxyCodeLine{34     std::pair<int, int> soilHumidity;}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+
+\end{DoxyCode}

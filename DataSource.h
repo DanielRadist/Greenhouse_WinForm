@@ -11,15 +11,8 @@ private:
 
 public:
 
-	/// <summary>
-	/// Создание порта между источником и объектом класса
-	/// </summary>
-	/// <param name="sensor">Объект, которому будем отсылать данные</param>
 	DataSource(Sensor* sensor);
 
-	/// <summary>
-	/// Присвоение полю data класс Sensor значение val
-	/// </summary>
 	void setData(int val);
 };
 

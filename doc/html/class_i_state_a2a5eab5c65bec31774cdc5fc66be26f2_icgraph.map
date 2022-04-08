@@ -1,0 +1,4 @@
+<map id="IState::get" name="IState::get">
+<area shape="rect" id="node1" title="Метод получения текущего состояния контроллера." alt="" coords="219,5,301,32"/>
+<area shape="rect" id="node2" href="$class_device_control.html#a9edc4a3840afc7dcef053c1dbcedbd4e" title="Получение статуса контроллера." alt="" coords="5,5,171,32"/>
+</map>

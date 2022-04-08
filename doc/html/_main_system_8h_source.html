@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Greenhouse: Исходный файл MainSystem.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Greenhouse<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MainSystem.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;SystemSensor.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;SystemControl.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;SystemBuilder.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;MeteoStation.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Culture.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="class_i_strategy.html">IStrategy</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_main_system.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="class_main_system.html">MainSystem</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="class_i_strategy.html">IStrategy</a>* strategy;        <span class="comment">// Стретегия работы (режим работы)</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_class" href="class_system_sensor.html">SystemSensor</a>* sysSens;      <span class="comment">// Система сенсоров</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="class_system_control.html">SystemControl</a>* sysCtrl;     <span class="comment">// Система контроля</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="class_meteo_station.html">MeteoStation</a>* meteoS;       <span class="comment">// Метеостанция</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="class_culture.html">Culture</a>* culrure;           <span class="comment">// Выращиваемая культура</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_function" href="class_main_system.html#aed9d007c8b9294f4ff8d578675d53b22">MainSystem</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_system.html#a57bfedf1fa3e26430fdffc0163775381">setStrategy</a>(<a class="code hl_class" href="class_i_strategy.html">IStrategy</a>* strategy);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_system.html#a3a3816817b045dd1bc297be73353fed6">setCulture</a>(<a class="code hl_class" href="class_culture.html">Culture</a>* culture);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_system.html#a7d0a9f8665ae2c6a6c6970ac8a6da813">solutionStrategy</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    list&lt;Sensor*&gt; <a class="code hl_function" href="class_main_system.html#afd347394779ce32693854c643acdad28">getListSensorGH</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    list&lt;Sensor*&gt; <a class="code hl_function" href="class_main_system.html#ab394ff4b6d14b46fd4ce0061b6442f12">getListSensorMS</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_i_strategy.html">   75</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_strategy.html">IStrategy</a></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_i_strategy.html#ae9df2b236001faeb29fbb024ebe33756">   85</a></span>    <span class="keyword">virtual</span> list&lt;pair&lt;TypeControl, TypeStatus&gt;&gt; <a class="code hl_function" href="class_i_strategy.html#ae9df2b236001faeb29fbb024ebe33756">solution</a>(<a class="code hl_class" href="class_data_climat.html">DataClimat</a> climat, <a class="code hl_class" href="class_data_climat.html">DataClimat</a> greenhouse, <a class="code hl_class" href="class_culture.html">Culture</a>* culture) = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_normal_strategy.html">   91</a></span><span class="keyword">class </span><a class="code hl_class" href="class_normal_strategy.html">NormalStrategy</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_strategy.html">IStrategy</a></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>{</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_class" href="class_normal_strategy.html">NormalStrategy</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    list&lt;pair&lt;TypeControl, TypeStatus&gt;&gt; <a class="code hl_function" href="class_normal_strategy.html#ae5ec94c6488229a0df583687c9823799">solution</a>(<a class="code hl_class" href="class_data_climat.html">DataClimat</a> climat, <a class="code hl_class" href="class_data_climat.html">DataClimat</a> greenhouse, <a class="code hl_class" href="class_culture.html">Culture</a>* culture);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>};</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_eco_strategy.html">  101</a></span><span class="keyword">class </span><a class="code hl_class" href="class_eco_strategy.html">EcoStrategy</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_strategy.html">IStrategy</a></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>{</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_class" href="class_eco_strategy.html">EcoStrategy</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    list&lt;pair&lt;TypeControl, TypeStatus&gt;&gt; <a class="code hl_function" href="class_eco_strategy.html#ab062853c53a26d1753a2990ffb4e32de">solution</a>(<a class="code hl_class" href="class_data_climat.html">DataClimat</a> climat, <a class="code hl_class" href="class_data_climat.html">DataClimat</a> greenhouse, <a class="code hl_class" href="class_culture.html">Culture</a>* culture);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>};</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="ttc" id="aclass_culture_html"><div class="ttname"><a href="class_culture.html">Culture</a></div><div class="ttdoc">Культура.</div><div class="ttdef"><b>Definition:</b> Culture.h:14</div></div>
+<div class="ttc" id="aclass_data_climat_html"><div class="ttname"><a href="class_data_climat.html">DataClimat</a></div><div class="ttdef"><b>Definition:</b> DataClimat.h:13</div></div>
+<div class="ttc" id="aclass_eco_strategy_html"><div class="ttname"><a href="class_eco_strategy.html">EcoStrategy</a></div><div class="ttdoc">Экономичный режим работы.</div><div class="ttdef"><b>Definition:</b> MainSystem.h:102</div></div>
+<div class="ttc" id="aclass_eco_strategy_html_ab062853c53a26d1753a2990ffb4e32de"><div class="ttname"><a href="class_eco_strategy.html#ab062853c53a26d1753a2990ffb4e32de">EcoStrategy::solution</a></div><div class="ttdeci">list&lt; pair&lt; TypeControl, TypeStatus &gt; &gt; solution(DataClimat climat, DataClimat greenhouse, Culture *culture)</div><div class="ttdoc">Виртуальный метод по принятию решения. Решение зависит от климатических параметров и типа реализации ...</div><div class="ttdef"><b>Definition:</b> MainSystem.cpp:148</div></div>
+<div class="ttc" id="aclass_i_strategy_html"><div class="ttname"><a href="class_i_strategy.html">IStrategy</a></div><div class="ttdoc">Интерфес стратегии (режим работы).</div><div class="ttdef"><b>Definition:</b> MainSystem.h:76</div></div>
+<div class="ttc" id="aclass_i_strategy_html_ae9df2b236001faeb29fbb024ebe33756"><div class="ttname"><a href="class_i_strategy.html#ae9df2b236001faeb29fbb024ebe33756">IStrategy::solution</a></div><div class="ttdeci">virtual list&lt; pair&lt; TypeControl, TypeStatus &gt; &gt; solution(DataClimat climat, DataClimat greenhouse, Culture *culture)=0</div><div class="ttdoc">Виртуальный метод по принятию решения. Решение зависит от климатических параметров и типа реализации ...</div></div>
+<div class="ttc" id="aclass_main_system_html"><div class="ttname"><a href="class_main_system.html">MainSystem</a></div><div class="ttdoc">Главная система управления климатом.</div><div class="ttdef"><b>Definition:</b> MainSystem.h:26</div></div>
+<div class="ttc" id="aclass_main_system_html_a3a3816817b045dd1bc297be73353fed6"><div class="ttname"><a href="class_main_system.html#a3a3816817b045dd1bc297be73353fed6">MainSystem::setCulture</a></div><div class="ttdeci">void setCulture(Culture *culture)</div><div class="ttdoc">Установка выращиваемой культуры.</div><div class="ttdef"><b>Definition:</b> MainSystem.cpp:38</div></div>
+<div class="ttc" id="aclass_main_system_html_a57bfedf1fa3e26430fdffc0163775381"><div class="ttname"><a href="class_main_system.html#a57bfedf1fa3e26430fdffc0163775381">MainSystem::setStrategy</a></div><div class="ttdeci">void setStrategy(IStrategy *strategy)</div><div class="ttdoc">Установка режима работы.</div><div class="ttdef"><b>Definition:</b> MainSystem.cpp:33</div></div>
+<div class="ttc" id="aclass_main_system_html_a7d0a9f8665ae2c6a6c6970ac8a6da813"><div class="ttname"><a href="class_main_system.html#a7d0a9f8665ae2c6a6c6970ac8a6da813">MainSystem::solutionStrategy</a></div><div class="ttdeci">void solutionStrategy()</div><div class="ttdoc">Воспользоваться стратегией.</div><div class="ttdef"><b>Definition:</b> MainSystem.cpp:43</div></div>
+<div class="ttc" id="aclass_main_system_html_ab394ff4b6d14b46fd4ce0061b6442f12"><div class="ttname"><a href="class_main_system.html#ab394ff4b6d14b46fd4ce0061b6442f12">MainSystem::getListSensorMS</a></div><div class="ttdeci">list&lt; Sensor * &gt; getListSensorMS()</div><div class="ttdoc">Получение списка сенсоров на метеостанции.</div><div class="ttdef"><b>Definition:</b> MainSystem.cpp:84</div></div>
+<div class="ttc" id="aclass_main_system_html_aed9d007c8b9294f4ff8d578675d53b22"><div class="ttname"><a href="class_main_system.html#aed9d007c8b9294f4ff8d578675d53b22">MainSystem::MainSystem</a></div><div class="ttdeci">MainSystem()</div><div class="ttdoc">Конструктор системы.</div><div class="ttdef"><b>Definition:</b> MainSystem.cpp:5</div></div>
+<div class="ttc" id="aclass_main_system_html_afd347394779ce32693854c643acdad28"><div class="ttname"><a href="class_main_system.html#afd347394779ce32693854c643acdad28">MainSystem::getListSensorGH</a></div><div class="ttdeci">list&lt; Sensor * &gt; getListSensorGH()</div><div class="ttdoc">Получение списка сенсоров в теплице.</div><div class="ttdef"><b>Definition:</b> MainSystem.cpp:79</div></div>
+<div class="ttc" id="aclass_meteo_station_html"><div class="ttname"><a href="class_meteo_station.html">MeteoStation</a></div><div class="ttdef"><b>Definition:</b> MeteoStation.h:7</div></div>
+<div class="ttc" id="aclass_normal_strategy_html"><div class="ttname"><a href="class_normal_strategy.html">NormalStrategy</a></div><div class="ttdoc">Обычный режим работы.</div><div class="ttdef"><b>Definition:</b> MainSystem.h:92</div></div>
+<div class="ttc" id="aclass_normal_strategy_html_ae5ec94c6488229a0df583687c9823799"><div class="ttname"><a href="class_normal_strategy.html#ae5ec94c6488229a0df583687c9823799">NormalStrategy::solution</a></div><div class="ttdeci">list&lt; pair&lt; TypeControl, TypeStatus &gt; &gt; solution(DataClimat climat, DataClimat greenhouse, Culture *culture)</div><div class="ttdoc">Виртуальный метод по принятию решения. Решение зависит от климатических параметров и типа реализации ...</div><div class="ttdef"><b>Definition:</b> MainSystem.cpp:96</div></div>
+<div class="ttc" id="aclass_system_control_html"><div class="ttname"><a href="class_system_control.html">SystemControl</a></div><div class="ttdoc">Система контроллеров. Связующая часть между MainSystem и дочерними классами от IControl.</div><div class="ttdef"><b>Definition:</b> SystemControl.h:15</div></div>
+<div class="ttc" id="aclass_system_sensor_html"><div class="ttname"><a href="class_system_sensor.html">SystemSensor</a></div><div class="ttdoc">Система сенсоров. Связующая часть между MainSystem и дочерними классами от Sensor.</div><div class="ttdef"><b>Definition:</b> SystemSensor.h:14</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

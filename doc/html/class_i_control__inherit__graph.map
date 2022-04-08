@@ -1,0 +1,10 @@
+<map id="IControl" name="IControl">
+<area shape="rect" id="node1" title="Интерфес контроллеров." alt="" coords="499,5,587,127"/>
+<area shape="rect" id="node2" href="$class_adapter_control_window.html" title="Адептр окна теплицы." alt="" coords="5,175,180,340"/>
+<area shape="rect" id="node3" href="$class_control_c_o2.html" title="Кран подачи СО2." alt="" coords="205,204,314,311"/>
+<area shape="rect" id="node4" href="$class_control_cooler.html" title="Кондиционер." alt="" coords="338,204,458,311"/>
+<area shape="rect" id="node5" href="$class_control_heater.html" title="Обогреватель." alt="" coords="483,204,604,311"/>
+<area shape="rect" id="node6" href="$class_control_humidity.html" title="Увлажнитель." alt="" coords="628,204,763,311"/>
+<area shape="rect" id="node7" href="$class_control_light.html" title="Искусственный свет." alt="" coords="787,204,897,311"/>
+<area shape="rect" id="node8" href="$class_control_soil_humidity.html" title="Кран полива." alt="" coords="921,204,1077,311"/>
+</map>

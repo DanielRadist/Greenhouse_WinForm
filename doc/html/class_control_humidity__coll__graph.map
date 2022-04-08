@@ -1,0 +1,4 @@
+<map id="ControlHumidity" name="ControlHumidity">
+<area shape="rect" id="node1" title="Увлажнитель." alt="" coords="5,175,140,281"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="Интерфес контроллеров." alt="" coords="29,5,117,127"/>
+</map>

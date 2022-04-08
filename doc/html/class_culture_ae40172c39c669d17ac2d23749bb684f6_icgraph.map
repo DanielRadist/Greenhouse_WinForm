@@ -1,0 +1,5 @@
+<map id="Culture::getMin" name="Culture::getMin">
+<area shape="rect" id="node1" title="Получить минимально значение характеристики климата, которое считываем Sensor&#39;ом типа TypeSensor" alt="" coords="219,31,329,57"/>
+<area shape="rect" id="node2" href="$class_normal_strategy.html#ae5ec94c6488229a0df583687c9823799" title="Виртуальный метод по принятию решения. Решение зависит от климатических параметров и типа реализации ..." alt="" coords="5,5,171,32"/>
+<area shape="rect" id="node3" href="$class_eco_strategy.html#ab062853c53a26d1753a2990ffb4e32de" title="Виртуальный метод по принятию решения. Решение зависит от климатических параметров и типа реализации ..." alt="" coords="15,56,161,83"/>
+</map>

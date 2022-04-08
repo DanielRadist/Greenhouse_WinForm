@@ -1,0 +1,5 @@
+<map id="EcoStrategy::solution" name="EcoStrategy::solution">
+<area shape="rect" id="node1" title="Виртуальный метод по принятию решения. Решение зависит от климатических параметров и типа реализации ..." alt="" coords="5,31,152,57"/>
+<area shape="rect" id="node2" href="$class_culture.html#a27d01f22ae7ef84768ce66a38d84fc3c" title="Получить максимальное значение характеристики климата, которое считываем Sensor&#39;ом типа TypeSensor" alt="" coords="200,5,315,32"/>
+<area shape="rect" id="node3" href="$class_culture.html#ae40172c39c669d17ac2d23749bb684f6" title="Получить минимально значение характеристики климата, которое считываем Sensor&#39;ом типа TypeSensor" alt="" coords="202,56,313,83"/>
+</map>

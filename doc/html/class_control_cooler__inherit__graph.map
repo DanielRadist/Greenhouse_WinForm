@@ -1,0 +1,4 @@
+<map id="ControlCooler" name="ControlCooler">
+<area shape="rect" id="node1" title="Кондиционер." alt="" coords="5,175,125,281"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="Интерфес контроллеров." alt="" coords="21,5,109,127"/>
+</map>

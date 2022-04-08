@@ -1,0 +1,177 @@
+\hypertarget{class_system_control_builder}{}\doxysection{Класс System\+Control\+Builder}
+\label{class_system_control_builder}\index{SystemControlBuilder@{SystemControlBuilder}}
+
+
+Строитель системы контроля климата  
+
+
+
+
+{\ttfamily \#include $<$System\+Builder.\+h$>$}
+
+Граф наследования\+:System\+Control\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_system_control_builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_system_control_builder_af7dba3ee11faf86fafb190164b41d7b5}{make\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Создание контроллера привода окна \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_control_builder_a82b5ec4a34e72884a1aa46235eaa8ba5}{make\+Cooler}} ()
+\begin{DoxyCompactList}\small\item\em Создание контроллера управления кондиционером \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_control_builder_a783d9a7f087cd2284fc45ed06c28f0bd}{make\+Heater}} ()
+\begin{DoxyCompactList}\small\item\em Создание контроллера управления подогревом \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_control_builder_a88d11bb14518540f561d871e45a6f767}{make\+CO2}} ()
+\begin{DoxyCompactList}\small\item\em Создание контроллера управления краном СО2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_control_builder_a49b285857a70df11c39a4bce4228ca61}{make\+Soil\+Humidity}} ()
+\begin{DoxyCompactList}\small\item\em Создание контроллера управления краном полива \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_control_builder_a2e0b47c753ff491985c681faf95e1fb4}{make\+Light}} ()
+\begin{DoxyCompactList}\small\item\em Создание контроллера управления искусственым освещением \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_control_builder_aebdf2f98132756d2b1a40c57480e934e}{make\+Humidity}} ()
+\begin{DoxyCompactList}\small\item\em Создание контроллера управления влажностью воздуха \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_control_builder_af4cfee1a8eb92bff0a786126bd3f4e4d}{make\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Нет реализации. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_control}{System\+Control}} $\ast$ \mbox{\hyperlink{class_system_control_builder_a8660caa34d663158af82372a574f543f}{get\+Result}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает указатель на дочерний класс интерфеса \mbox{\hyperlink{class_system_control}{System\+Control}} с созданными контроллерами. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Строитель системы контроля климата 
+
+Дочерний класс от интерфеса \mbox{\hyperlink{class_i_system_builder}{ISystem\+Builder}}. Содержит в себе реализацию некоторых виртуальных методов, необходимых для создания \mbox{\hyperlink{class_system_control}{System\+Control}}. Является частью паттерна \char`\"{}Строитель\char`\"{}. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_system_control_builder_a8660caa34d663158af82372a574f543f}\label{class_system_control_builder_a8660caa34d663158af82372a574f543f}} 
+\index{SystemControlBuilder@{SystemControlBuilder}!getResult@{getResult}}
+\index{getResult@{getResult}!SystemControlBuilder@{SystemControlBuilder}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_control}{System\+Control}} $\ast$ System\+Control\+Builder\+::get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает указатель на дочерний класс интерфеса \mbox{\hyperlink{class_system_control}{System\+Control}} с созданными контроллерами. 
+
+\begin{DoxyReturn}{Возвращает}
+Укахатель на объект \mbox{\hyperlink{class_system_control}{System\+Control}} со своим набором контроллеров.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_system_control_builder_a88d11bb14518540f561d871e45a6f767}\label{class_system_control_builder_a88d11bb14518540f561d871e45a6f767}} 
+\index{SystemControlBuilder@{SystemControlBuilder}!makeCO2@{makeCO2}}
+\index{makeCO2@{makeCO2}!SystemControlBuilder@{SystemControlBuilder}}
+\doxysubsubsection{\texorpdfstring{makeCO2()}{makeCO2()}}
+{\footnotesize\ttfamily void System\+Control\+Builder\+::make\+CO2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание контроллера управления краном СО2. 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_a55792bab07eaca13a5f27bb8e2f8638a}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_control_builder_a82b5ec4a34e72884a1aa46235eaa8ba5}\label{class_system_control_builder_a82b5ec4a34e72884a1aa46235eaa8ba5}} 
+\index{SystemControlBuilder@{SystemControlBuilder}!makeCooler@{makeCooler}}
+\index{makeCooler@{makeCooler}!SystemControlBuilder@{SystemControlBuilder}}
+\doxysubsubsection{\texorpdfstring{makeCooler()}{makeCooler()}}
+{\footnotesize\ttfamily void System\+Control\+Builder\+::make\+Cooler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание контроллера управления кондиционером 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_aa099b15d56c21c97248814a97e58fcd1}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_control_builder_a783d9a7f087cd2284fc45ed06c28f0bd}\label{class_system_control_builder_a783d9a7f087cd2284fc45ed06c28f0bd}} 
+\index{SystemControlBuilder@{SystemControlBuilder}!makeHeater@{makeHeater}}
+\index{makeHeater@{makeHeater}!SystemControlBuilder@{SystemControlBuilder}}
+\doxysubsubsection{\texorpdfstring{makeHeater()}{makeHeater()}}
+{\footnotesize\ttfamily void System\+Control\+Builder\+::make\+Heater (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание контроллера управления подогревом 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_acbe596526671eb6735599b5fc1a99d2e}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_control_builder_aebdf2f98132756d2b1a40c57480e934e}\label{class_system_control_builder_aebdf2f98132756d2b1a40c57480e934e}} 
+\index{SystemControlBuilder@{SystemControlBuilder}!makeHumidity@{makeHumidity}}
+\index{makeHumidity@{makeHumidity}!SystemControlBuilder@{SystemControlBuilder}}
+\doxysubsubsection{\texorpdfstring{makeHumidity()}{makeHumidity()}}
+{\footnotesize\ttfamily void System\+Control\+Builder\+::make\+Humidity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание контроллера управления влажностью воздуха 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_ad143fbddd6363987e1f954530b35d296}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_control_builder_a2e0b47c753ff491985c681faf95e1fb4}\label{class_system_control_builder_a2e0b47c753ff491985c681faf95e1fb4}} 
+\index{SystemControlBuilder@{SystemControlBuilder}!makeLight@{makeLight}}
+\index{makeLight@{makeLight}!SystemControlBuilder@{SystemControlBuilder}}
+\doxysubsubsection{\texorpdfstring{makeLight()}{makeLight()}}
+{\footnotesize\ttfamily void System\+Control\+Builder\+::make\+Light (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание контроллера управления искусственым освещением 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_aa3122ccee660cfaf1da73347b8d043ad}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_control_builder_a49b285857a70df11c39a4bce4228ca61}\label{class_system_control_builder_a49b285857a70df11c39a4bce4228ca61}} 
+\index{SystemControlBuilder@{SystemControlBuilder}!makeSoilHumidity@{makeSoilHumidity}}
+\index{makeSoilHumidity@{makeSoilHumidity}!SystemControlBuilder@{SystemControlBuilder}}
+\doxysubsubsection{\texorpdfstring{makeSoilHumidity()}{makeSoilHumidity()}}
+{\footnotesize\ttfamily void System\+Control\+Builder\+::make\+Soil\+Humidity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание контроллера управления краном полива 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_aca2f7b8005f751d24b1fdbff9b2aa39d}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_control_builder_af4cfee1a8eb92bff0a786126bd3f4e4d}\label{class_system_control_builder_af4cfee1a8eb92bff0a786126bd3f4e4d}} 
+\index{SystemControlBuilder@{SystemControlBuilder}!makeTemperature@{makeTemperature}}
+\index{makeTemperature@{makeTemperature}!SystemControlBuilder@{SystemControlBuilder}}
+\doxysubsubsection{\texorpdfstring{makeTemperature()}{makeTemperature()}}
+{\footnotesize\ttfamily void System\+Control\+Builder\+::make\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Нет реализации. 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_ac056d24f50d2821eca884ec5fc353963}{ISystem\+Builder}}.
+
+\mbox{\Hypertarget{class_system_control_builder_af7dba3ee11faf86fafb190164b41d7b5}\label{class_system_control_builder_af7dba3ee11faf86fafb190164b41d7b5}} 
+\index{SystemControlBuilder@{SystemControlBuilder}!makeWindow@{makeWindow}}
+\index{makeWindow@{makeWindow}!SystemControlBuilder@{SystemControlBuilder}}
+\doxysubsubsection{\texorpdfstring{makeWindow()}{makeWindow()}}
+{\footnotesize\ttfamily void System\+Control\+Builder\+::make\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Создание контроллера привода окна 
+
+
+
+Замещает \mbox{\hyperlink{class_i_system_builder_aaedf37329a6d2490cd7f2d2abad3a50c}{ISystem\+Builder}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+System\+Builder.\+h\item 
+System\+Builder.\+cpp\end{DoxyCompactItemize}

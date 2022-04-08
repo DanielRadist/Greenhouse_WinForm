@@ -1,0 +1,4 @@
+<map id="EcoStrategy" name="EcoStrategy">
+<area shape="rect" id="node1" title="Экономичный режим работы." alt="" coords="5,131,120,223"/>
+<area shape="rect" id="node2" href="$class_i_strategy.html" title="Интерфес стратегии (режим работы)." alt="" coords="19,5,106,83"/>
+</map>

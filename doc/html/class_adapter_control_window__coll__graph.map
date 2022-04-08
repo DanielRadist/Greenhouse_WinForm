@@ -1,0 +1,5 @@
+<map id="AdapterControlWindow" name="AdapterControlWindow">
+<area shape="rect" id="node1" title="Адептр окна теплицы." alt="" coords="29,189,203,340"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="Интерфес контроллеров." alt="" coords="5,5,93,127"/>
+<area shape="rect" id="node3" href="$class_control_window.html" title="Окно теплицы." alt="" coords="118,20,247,112"/>
+</map>

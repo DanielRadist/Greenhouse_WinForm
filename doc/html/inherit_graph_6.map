@@ -1,0 +1,5 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$class_i_strategy.html" title="Интерфес стратегии (режим работы)." alt="" coords="5,31,80,57"/>
+<area shape="rect" id="node2" href="$class_eco_strategy.html" title="Экономичный режим работы." alt="" coords="137,5,231,32"/>
+<area shape="rect" id="node3" href="$class_normal_strategy.html" title="Обычный режим работы." alt="" coords="128,56,240,83"/>
+</map>

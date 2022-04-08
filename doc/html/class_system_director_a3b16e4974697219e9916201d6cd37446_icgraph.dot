@@ -1,0 +1,12 @@
+digraph "SystemDirector::SystemDirector"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="SystemDirector::SystemDirector",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SystemDirector::Instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_system_director.html#a98295882d87874f008047fb884a42421",tooltip="Статический метод для получения экземпляра класса."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MainSystem::MainSystem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_main_system.html#aed9d007c8b9294f4ff8d578675d53b22",tooltip=" "];
+}

@@ -1,0 +1,8 @@
+<map id="SystemDirector::makeSystemSensor" name="SystemDirector::makeSystemSensor">
+<area shape="rect" id="node1" title="Метод, в реализации которого заложен приниц создания объекта SystemSensor для теплицы." alt="" coords="5,99,203,141"/>
+<area shape="rect" id="node2" href="$class_i_system_builder.html#a55792bab07eaca13a5f27bb8e2f8638a" title="Создание сенсора / контроллера уровня СО2." alt="" coords="274,5,450,32"/>
+<area shape="rect" id="node3" href="$class_i_system_builder.html#ad143fbddd6363987e1f954530b35d296" title="Создание сенсора / контроллера влажности." alt="" coords="261,56,463,83"/>
+<area shape="rect" id="node4" href="$class_i_system_builder.html#aa3122ccee660cfaf1da73347b8d043ad" title="Создание сенсора / контроллера освещенности." alt="" coords="273,107,451,133"/>
+<area shape="rect" id="node5" href="$class_i_system_builder.html#aca2f7b8005f751d24b1fdbff9b2aa39d" title="Создание сенсора / контроллера влажности почвы." alt="" coords="276,158,448,199"/>
+<area shape="rect" id="node6" href="$class_i_system_builder.html#ac056d24f50d2821eca884ec5fc353963" title="Создание сенсора температуры." alt="" coords="251,224,473,251"/>
+</map>

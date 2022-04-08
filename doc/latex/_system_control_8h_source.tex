@@ -1,0 +1,28 @@
+\hypertarget{_system_control_8h_source}{}\doxysection{System\+Control.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}DeviceControl.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_system_control}{SystemControl}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_a43fc0891c5bbb075b0992db9f3586ca1}{add}}(\mbox{\hyperlink{class_device_control}{DeviceControl}}* Device);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{19     \mbox{\hyperlink{class_device_control}{DeviceControl}}* \mbox{\hyperlink{class_system_control_a6e23cbde94a4b149ce9463ec7a827833}{create}}(\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4a}{TypeControl}} type);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_aa92fc2fa0cfb608fccb0cd4b87e019ef}{remove}}(\mbox{\hyperlink{class_device_control}{DeviceControl}}* Device);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{32     \mbox{\hyperlink{class_device_control}{DeviceControl}}* \mbox{\hyperlink{class_system_control_a0c8cd79fe1b0eab73341704f213f380d}{search}}(\mbox{\hyperlink{_type_control_8h_af2518c4f7a6c1190240b3370c418fb4a}{TypeControl}} typeDevice);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_system_control_ac4c678ad072a3ff45176136bf5693877}{solution}}(list<pair<TypeControl, TypeStatus>> solut);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} setWindowSetting(\textcolor{keywordtype}{int} minVal, \textcolor{keywordtype}{int} maxVal);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keyword}{private}:}
+\DoxyCodeLine{43     std::list<DeviceControl*> listDevice;}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+
+\end{DoxyCode}

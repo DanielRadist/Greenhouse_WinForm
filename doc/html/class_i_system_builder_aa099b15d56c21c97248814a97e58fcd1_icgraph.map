@@ -1,0 +1,5 @@
+<map id="ISystemBuilder::makeCooler" name="ISystemBuilder::makeCooler">
+<area shape="rect" id="node1" title="Создание контроллера кондиционера." alt="" coords="475,13,661,39"/>
+<area shape="rect" id="node2" href="$class_system_director.html#ac118ae301c556ef4d72d3da457b457a8" title="Метод, в реализации которого заложен приниц создания объекта SystemControl для теплицы." alt="" coords="229,5,427,47"/>
+<area shape="rect" id="node3" href="$class_main_system.html#aed9d007c8b9294f4ff8d578675d53b22" title="Конструктор системы." alt="" coords="5,13,181,39"/>
+</map>
