@@ -1,0 +1,454 @@
+
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+  <title>MainForm.h</title>
+
+  <link rel="stylesheet" href="../style.css"/>
+  <script src="../jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+<pre><code class = "cpp">
+<a name="ln1">#pragma once</a>
+<a name="ln2">#include &lt;utility&gt;</a>
+<a name="ln3">#include &lt;list&gt;</a>
+<a name="ln4">#include &lt;string&gt;</a>
+<a name="ln5">#include &lt;sstream&gt;</a>
+<a name="ln6"> </a>
+<a name="ln7">#include &quot;Log.h&quot;</a>
+<a name="ln8">#include &quot;Culture.h&quot;</a>
+<a name="ln9"> </a>
+<a name="ln10">#include &quot;MainSystem.h&quot;</a>
+<a name="ln11">#include &quot;DataSource.h&quot;</a>
+<a name="ln12"> </a>
+<a name="ln13"> </a>
+<a name="ln14">namespace Greenhouse</a>
+<a name="ln15">{</a>
+<a name="ln16">	using namespace System;</a>
+<a name="ln17">	using namespace System::IO;</a>
+<a name="ln18">	using namespace System::ComponentModel;</a>
+<a name="ln19">	using namespace System::Collections;</a>
+<a name="ln20">	using namespace System::Windows::Forms;</a>
+<a name="ln21">	using namespace System::Data;</a>
+<a name="ln22">	using namespace System::Drawing;</a>
+<a name="ln23"> </a>
+<a name="ln24"> </a>
+<a name="ln25">	/// &lt;summary&gt;</a>
+<a name="ln26">	/// Сводка для MainForm</a>
+<a name="ln27">	/// &lt;/summary&gt;</a>
+<a name="ln28">	public ref class MainForm : public System::Windows::Forms::Form</a>
+<a name="ln29">	{</a>
+<a name="ln30">	private:</a>
+<a name="ln31">		/// &lt;summary&gt;</a>
+<a name="ln32">		/// Список культур</a>
+<a name="ln33">		/// &lt;/summary&gt;</a>
+<a name="ln34">		std::map&lt;</a>
+<a name="ln35">			std::string,						// название</a>
+<a name="ln36">			Culture*&gt;							// указатель на объект</a>
+<a name="ln37">			* cultures;</a>
+<a name="ln38"> </a>
+<a name="ln39">		Culture* selectCulture = nullptr;		// Выбранная культура</a>
+<a name="ln40">		IStrategy* selectStrategy = nullptr;	// Выбраный режим работы</a>
+<a name="ln41"> </a>
+<a name="ln42">		// Доступ к сенсором, чтобы устанавливать значени с интерфейса</a>
+<a name="ln43">		// -- Ключ</a>
+<a name="ln44">		// -- -- TypeSensor - тип датчика</a>
+<a name="ln45">		// -- -- bool: true - с метеостанции, false - с теплицы</a>
+<a name="ln46">		// -- Не ключ: DataSource*: поток для передачи данных</a>
+<a name="ln47">		std::map&lt;pair&lt;TypeSensor, bool&gt;, DataSource*&gt;* streamToSensor;</a>
+<a name="ln48"> </a>
+<a name="ln49">		MainSystem* centerClimat;				// Центр управления климатом</a>
+<a name="ln50"> </a>
+<a name="ln51">	public:</a>
+<a name="ln52">		MainForm(void)</a>
+<a name="ln53">		{</a>
+<a name="ln54">			// Загружаем интерфес</a>
+<a name="ln55">			Log::add(&quot;Загрузка интерфейса... &quot;);</a>
+<a name="ln56">			InitializeComponent();</a>
+<a name="ln57">			logUpdate();</a>
+<a name="ln58"> </a>
+<a name="ln59"> </a>
+<a name="ln60">			loadGreenhouse();</a>
+<a name="ln61">			loadCulture();</a>
+<a name="ln62"> </a>
+<a name="ln63">			// культуры -&gt; comboBox</a>
+<a name="ln64">			for (auto it = cultures-&gt;begin(); it != cultures-&gt;end(); it++)</a>
+<a name="ln65">				comboBoxСulture-&gt;Items-&gt;Add(toClrString(it-&gt;first));</a>
+<a name="ln66"> </a>
+<a name="ln67">			logUpdate();</a>
+<a name="ln68"> </a>
+<a name="ln69"> </a>
+<a name="ln70">			Log::add(&quot;WARNING. Выберети режим работы. &quot;);</a>
+<a name="ln71">			logUpdate();</a>
+<a name="ln72">		}</a>
+<a name="ln73"> </a>
+<a name="ln74">	protected:</a>
+<a name="ln75"> </a>
+<a name="ln76">		// создание теплицы</a>
+<a name="ln77">		void loadGreenhouse()</a>
+<a name="ln78">		{</a>
+<a name="ln79">			Log::add(&quot;Инициализация системы... &quot;);</a>
+<a name="ln80">			logUpdate();</a>
+<a name="ln81"> </a>
+<a name="ln82">			centerClimat = new MainSystem();</a>
+<a name="ln83">			logUpdate();</a>
+<a name="ln84"> </a>
+<a name="ln85">			// Подключение Sensor's к интерфесу программы через DataSource</a>
+<a name="ln86">			list&lt;Sensor*&gt; sensorsGreenHouse = centerClimat-&gt;getListSensorGH();</a>
+<a name="ln87">			list&lt;Sensor*&gt; sensorsMeteoStation = centerClimat-&gt;getListSensorMS();</a>
+<a name="ln88">			streamToSensor = new std::map&lt;pair&lt;TypeSensor, bool&gt;, DataSource*&gt;();</a>
+<a name="ln89"> </a>
+<a name="ln90">			for (auto it = sensorsGreenHouse.begin(); it != sensorsGreenHouse.end(); it++)</a>
+<a name="ln91">				streamToSensor-&gt;insert(</a>
+<a name="ln92">					{</a>
+<a name="ln93">						{(*it)-&gt;getType(), false},</a>
+<a name="ln94">						new DataSource(*it)</a>
+<a name="ln95">					}</a>
+<a name="ln96">			);</a>
+<a name="ln97">			for (auto it = sensorsMeteoStation.begin(); it != sensorsMeteoStation.end(); it++)</a>
+<a name="ln98">				streamToSensor-&gt;insert(</a>
+<a name="ln99">					{</a>
+<a name="ln100">						{(*it)-&gt;getType(), true},</a>
+<a name="ln101">						new DataSource(*it)</a>
+<a name="ln102">					}</a>
+<a name="ln103">			);</a>
+<a name="ln104"> </a>
+<a name="ln105">			Log::add(&quot;Инициализация системы выполнена успешно. &quot;);</a>
+<a name="ln106">			logUpdate();</a>
+<a name="ln107">		}</a>
+<a name="ln108"> </a>
+<a name="ln109">		/// &lt;summary&gt;</a>
+<a name="ln110">		/// Загрузка из файла списка культур в comboBox и их характеристик в список сultures</a>
+<a name="ln111">		/// &lt;/summary&gt;</a>
+<a name="ln112">		void loadCulture()</a>
+<a name="ln113">		{</a>
+<a name="ln114">			Log::add(&quot;Загрузка культур... &quot;);</a>
+<a name="ln115">			cultures = new std::map&lt;std::string, Culture*&gt;();</a>
+<a name="ln116"> </a>
+<a name="ln117">			StreamReader sr(&quot;Cultures.txt&quot;);</a>
+<a name="ln118">			String^ line;</a>
+<a name="ln119">			line = sr.ReadLine();</a>
+<a name="ln120">			while (line != nullptr)</a>
+<a name="ln121">			{</a>
+<a name="ln122">				//Название</a>
+<a name="ln123">				std::string bufName = toStdString(line);</a>
+<a name="ln124"> </a>
+<a name="ln125">				DataClimat* minData = new DataClimat();</a>
+<a name="ln126">				DataClimat* maxData = new DataClimat();</a>
+<a name="ln127"> </a>
+<a name="ln128">				line = sr.ReadLine();</a>
+<a name="ln129">				while (line != L&quot;#&quot;)</a>
+<a name="ln130">				{</a>
+<a name="ln131">					std::string tmp = toStdString(line);</a>
+<a name="ln132">					std::stringstream ss(tmp);</a>
+<a name="ln133"> </a>
+<a name="ln134"> </a>
+<a name="ln135"> </a>
+<a name="ln136">					std::string namePar, minPar, maxPar;</a>
+<a name="ln137">					ss &gt;&gt; namePar;</a>
+<a name="ln138">					ss &gt;&gt; minPar;</a>
+<a name="ln139">					ss &gt;&gt; maxPar;</a>
+<a name="ln140"> </a>
+<a name="ln141">					if (namePar == &quot;T&quot;)</a>
+<a name="ln142">					{</a>
+<a name="ln143">						minData-&gt;setData(TypeSensor::Temperature, std::stoi(minPar));</a>
+<a name="ln144">						maxData-&gt;setData(TypeSensor::Temperature, std::stoi(maxPar));</a>
+<a name="ln145">					}</a>
+<a name="ln146">					else if (namePar == &quot;L&quot;)</a>
+<a name="ln147">					{</a>
+<a name="ln148">						minData-&gt;setData(TypeSensor::Light, std::stoi(minPar));</a>
+<a name="ln149">						maxData-&gt;setData(TypeSensor::Light, std::stoi(maxPar));</a>
+<a name="ln150">					}</a>
+<a name="ln151">					else if (namePar == &quot;C&quot;)</a>
+<a name="ln152">					{</a>
+<a name="ln153">						minData-&gt;setData(TypeSensor::CO2, std::stoi(minPar));</a>
+<a name="ln154">						maxData-&gt;setData(TypeSensor::CO2, std::stoi(maxPar));</a>
+<a name="ln155">					}</a>
+<a name="ln156">					else if (namePar == &quot;H&quot;)</a>
+<a name="ln157">					{</a>
+<a name="ln158">						minData-&gt;setData(TypeSensor::Humidity, std::stoi(minPar));</a>
+<a name="ln159">						maxData-&gt;setData(TypeSensor::Humidity, std::stoi(maxPar));</a>
+<a name="ln160">					}</a>
+<a name="ln161">					else if (namePar == &quot;S&quot;)</a>
+<a name="ln162">					{</a>
+<a name="ln163">						minData-&gt;setData(TypeSensor::SoilHumidity, std::stoi(minPar));</a>
+<a name="ln164">						maxData-&gt;setData(TypeSensor::SoilHumidity, std::stoi(maxPar));</a>
+<a name="ln165">					}</a>
+<a name="ln166">					else</a>
+<a name="ln167">					{</a>
+<a name="ln168">						Log::add(&quot;Error: Загрузка культур выполнена с ошибкой! &quot;);</a>
+<a name="ln169">						return;</a>
+<a name="ln170">					}</a>
+<a name="ln171"> </a>
+<a name="ln172">					line = sr.ReadLine();</a>
+<a name="ln173">				}</a>
+<a name="ln174"> </a>
+<a name="ln175">				Culture* cultTmp = new Culture(bufName, minData, maxData);</a>
+<a name="ln176"> </a>
+<a name="ln177">				cultures-&gt;insert({ bufName, cultTmp });</a>
+<a name="ln178"> </a>
+<a name="ln179">				delete minData;</a>
+<a name="ln180">				delete maxData;</a>
+<a name="ln181">				line = sr.ReadLine();</a>
+<a name="ln182">			}</a>
+<a name="ln183">			sr.Close();</a>
+<a name="ln184">			Log::add(&quot;Загрузка культур выполнена успешно. &quot;);</a>
+<a name="ln185">		}</a>
+<a name="ln186"> </a>
+<a name="ln187">		/// &lt;summary&gt;</a>
+<a name="ln188">		/// Произошли изменения, пора пересчитать параметры климата</a>
+<a name="ln189">		/// &lt;/summary&gt;</a>
+<a name="ln190">		void goToSolution()</a>
+<a name="ln191">		{</a>
+<a name="ln192">			// собрать данные и отправить в поток</a>
+<a name="ln193">			// Датчики теплицы:</a>
+<a name="ln194">			streamToSensor-&gt;at({ TypeSensor::Temperature, false })-&gt;setData(Convert::ToInt32(numericGHTemperature-&gt;Value));</a>
+<a name="ln195">			streamToSensor-&gt;at({ TypeSensor::Light, false })-&gt;setData(Convert::ToInt32(numericGHLight-&gt;Value));</a>
+<a name="ln196">			streamToSensor-&gt;at({ TypeSensor::CO2, false })-&gt;setData(Convert::ToInt32(numericGHco2-&gt;Value));</a>
+<a name="ln197">			streamToSensor-&gt;at({ TypeSensor::Humidity, false })-&gt;setData(Convert::ToInt32(numericGHHumidity-&gt;Value));</a>
+<a name="ln198">			streamToSensor-&gt;at({ TypeSensor::SoilHumidity, false })-&gt;setData(Convert::ToInt32(numericGHSoilHumidity-&gt;Value));</a>
+<a name="ln199">			// Датчики метеостанции:</a>
+<a name="ln200">			streamToSensor-&gt;at({ TypeSensor::Temperature, true })-&gt;setData(Convert::ToInt32(numericMSTemperature-&gt;Value));</a>
+<a name="ln201">			streamToSensor-&gt;at({ TypeSensor::Humidity, true })-&gt;setData(Convert::ToInt32(numericMSHumidity-&gt;Value));</a>
+<a name="ln202">			streamToSensor-&gt;at({ TypeSensor::CO2, true })-&gt;setData(Convert::ToInt32(numericMSco2-&gt;Value));</a>
+<a name="ln203"> </a>
+<a name="ln204"> </a>
+<a name="ln205">			if (selectCulture == nullptr)</a>
+<a name="ln206">				Log::add(&quot;WARNING! Выберите культуру! &quot;);</a>
+<a name="ln207">			if (selectStrategy == nullptr)</a>
+<a name="ln208">				Log::add(&quot;WARNING! Выберите режим работы! &quot;);</a>
+<a name="ln209">			if (selectStrategy != nullptr &amp;&amp; selectCulture != nullptr)</a>
+<a name="ln210">			{</a>
+<a name="ln211">				centerClimat-&gt;setCulture(selectCulture);</a>
+<a name="ln212">				centerClimat-&gt;setStrategy(selectStrategy);</a>
+<a name="ln213">				logUpdate();</a>
+<a name="ln214">				centerClimat-&gt;solutionStrategy();</a>
+<a name="ln215">				logUpdate();</a>
+<a name="ln216">			}</a>
+<a name="ln217">			logUpdate();</a>
+<a name="ln218">		}</a>
+<a name="ln219"> </a>
+<a name="ln220">		~MainForm()</a>
+<a name="ln221">		{</a>
+<a name="ln222">			if (components)</a>
+<a name="ln223">			{</a>
+<a name="ln224">				delete components;</a>
+<a name="ln225">			}</a>
+<a name="ln226">		}</a>
+<a name="ln227"> </a>
+<a name="ln228">	public:</a>
+<a name="ln229"> </a>
+<a name="ln230"> </a>
+<a name="ln231">		void logUpdate()</a>
+<a name="ln232">		{</a>
+<a name="ln233">			while (Log::size() != 0)</a>
+<a name="ln234">			{</a>
+<a name="ln235">				logAdd(Log::pop());</a>
+<a name="ln236">			}</a>
+<a name="ln237">		}</a>
+<a name="ln238"> </a>
+<a name="ln239">		/// &lt;summary&gt;</a>
+<a name="ln240">		/// Добавление в textBoxLog строки</a>
+<a name="ln241">		/// &lt;/summary&gt;</a>
+<a name="ln242">		/// &lt;param name=&quot;info&quot;&gt;данные для вывода&lt;/param&gt;</a>
+<a name="ln243">		void logAdd(std::string info)</a>
+<a name="ln244">		{</a>
+<a name="ln245">			info += &quot;\r\n&quot;;</a>
+<a name="ln246">			String^ t = gcnew String(info.c_str());</a>
+<a name="ln247">			textBoxLog-&gt;AppendText(t);</a>
+<a name="ln248">			textBoxLog-&gt;ScrollToCaret();</a>
+<a name="ln249">		}</a>
+<a name="ln250"> </a>
+<a name="ln251">		/// &lt;summary&gt;</a>
+<a name="ln252">		/// Очистка textBoxLog</a>
+<a name="ln253">		/// &lt;/summary&gt;</a>
+<a name="ln254">		void logClear()</a>
+<a name="ln255">		{</a>
+<a name="ln256">			textBoxLog-&gt;Clear();</a>
+<a name="ln257">		}</a>
+<a name="ln258"> </a>
+<a name="ln259">		std::string toStdString(String^ str)</a>
+<a name="ln260">		{</a>
+<a name="ln261">			std::string ret = &quot;&quot;;</a>
+<a name="ln262">			for (int i = 0; i &lt; str-&gt;Length; i++)</a>
+<a name="ln263">				ret += (char)str[i];</a>
+<a name="ln264">			return ret;</a>
+<a name="ln265">		}</a>
+<a name="ln266"> </a>
+<a name="ln267">		String^ toClrString(std::string str)</a>
+<a name="ln268">		{</a>
+<a name="ln269">			String^ t = gcnew String(str.c_str());</a>
+<a name="ln270">			return t;</a>
+<a name="ln271">		}</a>
+<a name="ln272"> </a>
+<a name="ln273"> </a>
+<a name="ln274"> </a>
+<a name="ln275">	private: System::Windows::Forms::GroupBox^ groupBoxMeteoStation;</a>
+<a name="ln276">	private: System::Windows::Forms::GroupBox^ groupBoxGreenHouse;</a>
+<a name="ln277"> </a>
+<a name="ln278">	private: System::Windows::Forms::Label^ label5;</a>
+<a name="ln279">	private: System::Windows::Forms::Label^ label4;</a>
+<a name="ln280">	private: System::Windows::Forms::Label^ label3;</a>
+<a name="ln281">	private: System::Windows::Forms::Label^ label2;</a>
+<a name="ln282">	private: System::Windows::Forms::Label^ label1;</a>
+<a name="ln283">	private: System::Windows::Forms::Label^ label7;</a>
+<a name="ln284">	private: System::Windows::Forms::Label^ label9;</a>
+<a name="ln285">	private: System::Windows::Forms::Label^ label10;</a>
+<a name="ln286"> </a>
+<a name="ln287">	private: System::Windows::Forms::Label^ label6;</a>
+<a name="ln288"> </a>
+<a name="ln289">	private: System::Windows::Forms::NumericUpDown^ numericGHLight;</a>
+<a name="ln290">	private: System::Windows::Forms::NumericUpDown^ numericGHco2;</a>
+<a name="ln291">	private: System::Windows::Forms::NumericUpDown^ numericGHHumidity;</a>
+<a name="ln292">	private: System::Windows::Forms::NumericUpDown^ numericGHSoilHumidity;</a>
+<a name="ln293">	private: System::Windows::Forms::NumericUpDown^ numericGHTemperature;</a>
+<a name="ln294"> </a>
+<a name="ln295">	private: System::Windows::Forms::NumericUpDown^ numericMSco2;</a>
+<a name="ln296">	private: System::Windows::Forms::NumericUpDown^ numericMSHumidity;</a>
+<a name="ln297">	private: System::Windows::Forms::NumericUpDown^ numericMSTemperature;</a>
+<a name="ln298"> </a>
+<a name="ln299">	private: System::Windows::Forms::TextBox^ textBoxLog;</a>
+<a name="ln300">	private: System::Windows::Forms::Label^ label11;</a>
+<a name="ln301"> </a>
+<a name="ln302">	private: System::Windows::Forms::GroupBox^ groupBoxStrategy;</a>
+<a name="ln303">	private: System::Windows::Forms::RadioButton^ radioButtonEcoStrategy;</a>
+<a name="ln304">	private: System::Windows::Forms::RadioButton^ radioButtonNormalStrategy;</a>
+<a name="ln305"> </a>
+<a name="ln306"> </a>
+<a name="ln307"> </a>
+<a name="ln308"> </a>
+<a name="ln309"> </a>
+<a name="ln310">	protected:</a>
+<a name="ln311"> </a>
+<a name="ln312">	protected:</a>
+<a name="ln313"> </a>
+<a name="ln314"> </a>
+<a name="ln315">	private:</a>
+<a name="ln316"> </a>
+<a name="ln317"> </a>
+<a name="ln318">	private: System::Windows::Forms::ComboBox^ comboBoxСulture;</a>
+<a name="ln319">	private: System::Windows::Forms::TextBox^ textBoxСulture;</a>
+<a name="ln320"> </a>
+<a name="ln321">	private:</a>
+<a name="ln322">		/// &lt;summary&gt;</a>
+<a name="ln323">		/// Обязательная переменная конструктора.</a>
+<a name="ln324">		/// &lt;/summary&gt;</a>
+<a name="ln325">		System::ComponentModel::Container^ components;</a>
+<a name="ln326"> </a>
+<a name="ln327">#pragma region Windows Form Designer generated code</a>
+<a name="ln328">		/// &lt;summary&gt;</a>
+<a name="ln329">		/// Требуемый метод для поддержки конструктора — не изменяйте </a>
+<a name="ln330">		/// содержимое этого метода с помощью редактора кода.</a>
+<a name="ln331">		/// &lt;/summary&gt;</a>
+<a name="ln332">		void InitializeComponent(void);</a>
+<a name="ln333">#pragma endregion</a>
+<a name="ln334"> </a>
+<a name="ln335">	private: System::Void radioButtonNormalStrategy_CheckedChanged(System::Object^ sender, System::EventArgs^ e)</a>
+<a name="ln336">	{</a>
+<a name="ln337">		if (radioButtonNormalStrategy-&gt;Checked == true)</a>
+<a name="ln338">		{</a>
+<a name="ln339">			selectStrategy = new NormalStrategy();</a>
+<a name="ln340">			logUpdate();</a>
+<a name="ln341">			goToSolution();</a>
+<a name="ln342">		}</a>
+<a name="ln343">	}</a>
+<a name="ln344">	private: System::Void radioButtonEcoStrategy_CheckedChanged(System::Object^ sender, System::EventArgs^ e)</a>
+<a name="ln345">	{</a>
+<a name="ln346">		if (radioButtonEcoStrategy-&gt;Checked == true)</a>
+<a name="ln347">		{</a>
+<a name="ln348">			selectStrategy = new EcoStrategy();</a>
+<a name="ln349">			logUpdate();</a>
+<a name="ln350">			goToSolution();</a>
+<a name="ln351">		}</a>
+<a name="ln352">	}</a>
+<a name="ln353">	private: System::Void comboBoxСulture_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e)</a>
+<a name="ln354">	{</a>
+<a name="ln355">		std::string selectStr = toStdString(comboBoxСulture-&gt;SelectedItem-&gt;ToString());</a>
+<a name="ln356">		selectCulture = cultures-&gt;at(selectStr);</a>
+<a name="ln357">		textBoxСulture-&gt;Clear();</a>
+<a name="ln358"> </a>
+<a name="ln359">		std::string buf = &quot;Требуемый климат: \r\n&quot;;</a>
+<a name="ln360"> </a>
+<a name="ln361">		buf += &quot;Темпер. : &quot; + std::to_string(selectCulture-&gt;getMin(TypeSensor::Temperature)) + &quot; : &quot; + std::to_string(selectCulture-&gt;getMax(TypeSensor::Temperature)) + &quot; *C&quot; + &quot;\r\n&quot;;</a>
+<a name="ln362">		buf += &quot;Освещ.  : &quot; + std::to_string(selectCulture-&gt;getMin(TypeSensor::Light)) + &quot; : &quot; + std::to_string(selectCulture-&gt;getMax(TypeSensor::Light)) + &quot; lm&quot; + &quot;\r\n&quot;;</a>
+<a name="ln363">		buf += &quot;Ур. CO2 : &quot; + std::to_string(selectCulture-&gt;getMin(TypeSensor::CO2)) + &quot; : &quot; + std::to_string(selectCulture-&gt;getMax(TypeSensor::CO2)) + &quot; %&quot; + &quot;\r\n&quot;;</a>
+<a name="ln364">		buf += &quot;Воз. Вл.: &quot; + std::to_string(selectCulture-&gt;getMin(TypeSensor::Humidity)) + &quot; : &quot; + std::to_string(selectCulture-&gt;getMax(TypeSensor::Humidity)) + &quot; %&quot; + &quot;\r\n&quot;;</a>
+<a name="ln365">		buf += &quot;Поч. Вл.: &quot; + std::to_string(selectCulture-&gt;getMin(TypeSensor::SoilHumidity)) + &quot; : &quot; + std::to_string(selectCulture-&gt;getMax(TypeSensor::SoilHumidity)) + &quot; %&quot;;</a>
+<a name="ln366"> </a>
+<a name="ln367">		textBoxСulture-&gt;Text = toClrString(buf);</a>
+<a name="ln368"> </a>
+<a name="ln369">		Log::add(&quot;ИЗМЕНЕНА КУЛЬТУРА! Изменена на: &quot; + selectCulture-&gt;getName() + &quot;. &quot;);</a>
+<a name="ln370">		logUpdate();</a>
+<a name="ln371">		goToSolution();</a>
+<a name="ln372">	}</a>
+<a name="ln373"> </a>
+<a name="ln374">		   // Показатели климата теплицы</a>
+<a name="ln375">	private: System::Void numericGHTemperature_ValueChanged(System::Object^ sender, System::EventArgs^ e) {</a>
+<a name="ln376">		goToSolution();</a>
+<a name="ln377">	}</a>
+<a name="ln378">	private: System::Void numericGHSoilHumidity_ValueChanged(System::Object^ sender, System::EventArgs^ e) {</a>
+<a name="ln379">		goToSolution();</a>
+<a name="ln380">	}</a>
+<a name="ln381">	private: System::Void numericGHHumidity_ValueChanged(System::Object^ sender, System::EventArgs^ e) {</a>
+<a name="ln382">		goToSolution();</a>
+<a name="ln383">	}</a>
+<a name="ln384">	private: System::Void numericGHco2_ValueChanged(System::Object^ sender, System::EventArgs^ e) {</a>
+<a name="ln385">		goToSolution();</a>
+<a name="ln386">	}</a>
+<a name="ln387">	private: System::Void numericGHLight_ValueChanged(System::Object^ sender, System::EventArgs^ e) {</a>
+<a name="ln388">		goToSolution();</a>
+<a name="ln389">	}</a>
+<a name="ln390">		   // Покахатели климата с метеостанции</a>
+<a name="ln391">	private: System::Void numericMSTemperature_ValueChanged(System::Object^ sender, System::EventArgs^ e) {</a>
+<a name="ln392">		goToSolution();</a>
+<a name="ln393">	}</a>
+<a name="ln394">	private: System::Void numericMSHumidity_ValueChanged(System::Object^ sender, System::EventArgs^ e) {</a>
+<a name="ln395">		goToSolution();</a>
+<a name="ln396">	}</a>
+<a name="ln397">	private: System::Void numericMSco2_ValueChanged(System::Object^ sender, System::EventArgs^ e) {</a>
+<a name="ln398">		goToSolution();</a>
+<a name="ln399">	}</a>
+<a name="ln400">	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {</a>
+<a name="ln401">		textBoxLog-&gt;ScrollToCaret();</a>
+<a name="ln402">	}</a>
+<a name="ln403">	private: System::Void MainForm_Shown(System::Object^ sender, System::EventArgs^ e) {</a>
+<a name="ln404">		textBoxLog-&gt;ScrollToCaret();</a>
+<a name="ln405">	}</a>
+<a name="ln406">	};</a>
+<a name="ln407">}</a>
+
+</code></pre>
+<div class="balloon" rel="169"><p><span style="font-size:18px">&uarr;</span> <a href="https://pvs-studio.com/en/docs/warnings/v773/" target="_blank">V773</a> The function was exited without releasing the 'maxData' pointer. A memory leak is possible.</p></div>
+<div class="balloon" rel="169"><p><span style="font-size:18px">&uarr;</span> <a href="https://pvs-studio.com/en/docs/warnings/v773/" target="_blank">V773</a> The function was exited without releasing the 'minData' pointer. A memory leak is possible.</p></div>
+
+<link rel="stylesheet" href="highlight.css">
+<script src="highlight.pack.js"></script>
+<script src="highlightjs-line-numbers.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>hljs.initLineNumbersOnLoad();</script>
+<script>
+  $(document).ready(function() {
+      $('.balloon').each(function () {
+          var bl = $(this);
+          var line = bl.attr('rel');
+          var text = $('a[name="ln'+line+'"]').text();
+
+          var space_count = 0;
+          for(var i = 0; i<text.length; i++){
+              var char = text[i];
+              if((char !== ' ')&&(char !== '\t'))break;
+              if(char === '\t')space_count++;
+              space_count++;
+          }
+
+          bl.css('margin-left', space_count*8);
+          $('a[name="ln'+line+'"]').after(bl);
+      });
+
+      window.location = window.location;
+  });
+</script>
+</body>
+</html>
